@@ -1,0 +1,38 @@
+.background-img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: -1;
+}
+
+body {
+  background: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#home, #about, #gallery, #contact {
+  /*display: none;*/
+}
+
+#home {
+  background: #383a3f;
+  height: 800px;
+}
+
+#about {
+  background: #b03060;
+  height: 800px;
+}
+
+#gallery {
+  background: #ff7f00;
+  height: 800px;
+}
+
+#contact {
+  background: #458b00;
+  height: 800px;
+}
