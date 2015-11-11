@@ -7,6 +7,7 @@
 }
 
 body {
+  margin-top: 50px;
   background: black;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,11 +15,11 @@ body {
 }
 
 #home, #about, #gallery, #contact {
-  /*display: none;*/
+
 }
 
 #home {
-  background: #383a3f;
+  background: #309a9f;
   height: 800px;
 }
 
