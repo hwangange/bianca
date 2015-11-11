@@ -16,7 +16,11 @@
       $(document).ready(function(){
 
         $('div').scrollTop(0);
-        $('#home-but').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+
+        $('#home-but, .navbar-brand').click(function() {
           $('#home-but').addClass('active');
           $('#about-but').removeClass('active');
           $('#gallery-but').removeClass('active');
