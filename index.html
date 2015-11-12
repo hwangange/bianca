@@ -10,8 +10,10 @@
       <link href="css/main.css" rel="stylesheet" media="screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
-    <body>
+    <body data-spy = "scroll" data-target = "#myNavbar">
       <script src="js/bootstrap.min.js"></script>
+      <!--<script src = "jQuery.min.js"></script> -->
+      <script src = "js/jQuery.scrollSpeed.js"></script>
       <script>
       $(document).ready(function(){
 
@@ -20,7 +22,7 @@
             scrollTop: 0
         }, 1000);
 
-        $('#home-but, .navbar-brand').click(function() {
+/*        $('#home-but, .navbar-brand').click(function() {
           $('#home-but').addClass('active');
           $('#about-but').removeClass('active');
           $('#gallery-but').removeClass('active');
@@ -47,17 +49,19 @@
           $('#gallery-but').removeClass('active');
           $('#home-but').removeClass('active');
         });
-
+*/
         $('a[href^="#"]').on('click', function(event) {
             var target = $($(this).attr('href'));
             if( target.length ) {
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top-50
+                    scrollTop: target.offset().top /*-50*/
                 }, 1000);
             }
         });
+
       });
+
       </script>
 
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
@@ -84,6 +88,11 @@
 
        <div id = "home" class="container">
          <h1>HOME</h1>
+         <ul>
+           <li><a href = "#about">About</a></li>
+           <li><a href = "#gallery">Gallery</a></li>
+           <li><a href = "#contact">Contact</a></li>
+         </ul>
          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -110,9 +119,14 @@
        <div id = "contact" class="container">
          <h1>CONTACT</h1>
 
-         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+         <h3 class = "strong">Phone: </h3>
+         <h4>111.111.1111.</h4>
+
+         <h3 class = "strong">Email: </h3>
+         <h4>bianca.chu@gmail.com</h4>
+
+         <h3 class = "strong"><a href = "#">Facebook</a></h3>
+         <h3 class = "strong"><a href = "#">Instagram</a></h3>
       </div>
   </body>
 </html>

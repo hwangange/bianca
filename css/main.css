@@ -14,8 +14,12 @@ body {
   background-size: cover;
 }
 
-#home, #about, #gallery, #contact {
+h1 {
+  text-align: center;
+}
 
+#home, #about, #gallery, #contact {
+  padding-top: 50px;
 }
 
 #home {
@@ -36,4 +40,23 @@ body {
 #contact {
   background: #458b00;
   height: 800px;
+  text-align: center;
 }
+
+
+/**LINKS**/
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+  nav a, nav a:visited {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* selected nav link*/
+  nav a.selected, nav a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
