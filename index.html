@@ -14,6 +14,9 @@
       <script src="js/bootstrap.min.js"></script>
       <!--<script src = "jQuery.min.js"></script> -->
       <script src = "js/jQuery.scrollSpeed.js"></script>
+      <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+      <script src="jquery/external/jquery/jquery.js"></script>
+      <script src="jquery/jquery-ui.min.js"></script>
       <script>
       $(document).ready(function(){
 
@@ -22,6 +25,18 @@
         $('html, body').animate({
             scrollTop: 0
         }, 1000);
+
+        $('#profile').hover(
+          function() {
+            $("#profile").fadeTo(200,.5);
+          },
+          function() {
+            $("#profile").fadeTo(200,1);
+        });
+        $('#profile').click(
+          function() {
+
+          });
 
 /*        $('#home-but, .navbar-brand').click(function() {
           $('#home-but').addClass('active');
@@ -99,7 +114,7 @@
        <div id = "about" class="container">
          <h1>ABOUT</h1>
 
-         <img class = "img-responsive" src = "img/profile.jpg" style = "max-height: 500px; float:left; margin: 0 30px 30px 0">
+         <img id = "profile" class = "img-responsive" src = "img/profile.jpg" style = "max-height: 500px; float:left; margin: 0 30px 30px 0">
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
