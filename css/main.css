@@ -29,7 +29,7 @@ h1 {
 
 #about {
   background: #b03060;
-  height: 800px;
+  height: 100%;
 }
 
 #gallery {
@@ -40,6 +40,10 @@ h1 {
 #contact {
   background: #458b00;
   padding-bottom: 100px;
+}
+
+#about {
+  word-wrap: break-word;
 }
 
 
