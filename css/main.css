@@ -18,6 +18,11 @@ h1 {
   margin-bottom: 30px;
 }
 
+.navbar-brand, #bio-name, h1 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+}
+
 #home, #about, #gallery, #recognition, #contact {
   padding:50px; /*50px*/
   height: 100%;
