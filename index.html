@@ -22,22 +22,20 @@
       $(document).ready(function(){
 
         /** automatically scroll to top **/
+        $('#bio').fadeIn();
+
         $('div').scrollTop(0);
         $('html, body').animate({
             scrollTop: 0
         }, 1000);
 
-        $('#profile').hover(
+        $('.center').hover(
           function() {
-            $("#profile").fadeTo(200,.5);
+            $(this).fadeTo(200,.5);
           },
           function() {
-            $("#profile").fadeTo(200,1);
+            $(this).fadeTo(200,1);
         });
-        $('#profile').click(
-          function() {
-
-          });
 
 /*        $('#home-but, .navbar-brand').click(function() {
           $('#home-but').addClass('active');
@@ -95,7 +93,7 @@
             <div class="navbar-collapse collapse" id="navbarCollapse" aria-expanded="false" style="height: 1px;">
               <ul class="nav navbar-nav">
                 <li id = "about-but"><a href="#about">about</a></li>
-                <li id = "gallery-but"><a href="#gallery">portolio and gallery</a></li>
+                <li id = "gallery-but"><a href="#gallery">portfolio and gallery</a></li>
                 <li id = "recognition-but"><a href="#recognition">recognition</a></li>
                 <li id = "contact-but"><a href="#contact">contact</a></li>
               </ul>
@@ -115,19 +113,25 @@
          <h1>about</h1>
 
          <img id = "profile" class = "img-responsive" src = "img/profile.jpg" style = "max-height: 500px; float:left; margin: 0 30px 30px 0">
-           <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
        </div>
 
-       <div id = "gallery" class = "container-fluid">
+       <section id = "gallery" class = "container-fluid">
          <h1>gallery</h1>
-
-         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
+         <div id = "menu" class = "container-fluid">
+           <div id = "twod" class = "center" style = "display: inline-block">
+             <div class = "vcenter" style = "text-align: center">2D Art</div>
+           </div>
+           <div id = "drawing" class = "center" style = "display: inline-block">
+             <div class = "vcenter" style = "text-align: center;">Drawing</div>
+           </div>
+           <div id = "sculpting" class = "center" style = "display: inline-block">
+             <div class = "vcenter" style = "text-align: center;">Sculpting</div>
+           </div>
+         </section>
        </div>
 
        <div id = "recognition" class = "container-fluid">
