@@ -39,6 +39,7 @@ h1 {
 
 #bio {
 /*  margin: 50px 10px 50px 50px;*/
+  display: none;
   position: absolute;
   background-color: yellow;
   padding: 10px;
@@ -78,11 +79,14 @@ h1 {
   vertical-align: middle;
 }
 
-#twod, #drawing, #sculpting {
+#twod, #drawing, #sculpting, #twodlightgallery {
   margin: 3%;
   background: #cc99ff;
   width: 300px;
   height: 300px;
+}
+
+#twod, #drawing, #sculpting, #twodlightgallery, .item {
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -90,17 +94,45 @@ h1 {
   -webkit-align-items: center;
 }
 
+
 .vcenter {
     -webkit-flex: 1;
     flex:1;
     line-height: 300px;
 }
 
+.invisible {
+  display: none;
+}
+
+/*#3dlightgallery {
+  position: relative;
+}
+
+.preview {
+  position:absolute;
+  left: 0;
+  top: 0;
+}
+
+.label {
+  z-index: 100;
+  position: absolute;
+  left: 150px;
+  top: 350px;
+}*/
+
+#3dlightgallery .label {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px; /*optional, though better have one */
+}
+
 /***RECOGNITION***/
 #recognition {
   background: #cc99ff;
 }
-
 
 /*** CONTACT ***/
 

@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <title>Bianca Chu</title>
       <meta name="viewport" content="width=device-width, initial-scale = 1">
+      <link type = "text/css" rel = "stylesheet" href = "lightGallery-master/src/css/lightGallery.css" />
       <link href='https://fonts.googleapis.com/css?family=Poiret+One|Quicksand|Questrial|Comfortaa:400,700' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- Optional Bootstrap theme -->
@@ -11,6 +12,7 @@
       <link href="css/main.css" rel="stylesheet" media="screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
+
     <body data-spy = "scroll" data-target = "#myNavbar">
       <script src="js/bootstrap.min.js"></script>
       <!--<script src = "jQuery.min.js"></script> -->
@@ -18,18 +20,29 @@
       <link rel="stylesheet" href="jquery/jquery-ui.min.css">
       <script src="jquery/external/jquery/jquery.js"></script>
       <script src="jquery/jquery-ui.min.js"></script>
+      <script src = "lightGallery-master/src/js/lightgallery.js"></script>
+
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.minjs"></script>
+
+      <script src = "lightGallery-master/src/js/lg-thumbnail.js"></script>
+      <script src = "lightGallery-master/src/js/lg-fullscreen.js"></script>
       <script>
       $(document).ready(function(){
 
         /** automatically scroll to top **/
-        $('#bio').fadeIn();
+        $('#bio').fadeIn(2000);
 
-        $('div').scrollTop(0);
+        $("#3dlightgallery, #2dlightgallery, #worklightgallery, #twodlightgallery").lightGallery({
+          selector: '.item',
+          mode: 'lg-slide'
+        });
+
+      /*  $('div').scrollTop(0);
         $('html, body').animate({
             scrollTop: 0
-        }, 1000);
+        }, 1000);*/
 
-        $('.center').hover(
+        $('.center, .preview').hover(
           function() {
             $(this).fadeTo(200,.5);
           },
@@ -131,6 +144,46 @@
            <div id = "sculpting" class = "center" style = "display: inline-block">
              <div class = "vcenter" style = "text-align: center;">Sculpting</div>
            </div>
+
+           <div id = "twodlightgallery" class = "center" style = "display: block">
+             <div class = "vcenter" style = "text-align: center">2D Art</div>
+             <div class = "invisible item" data-src = "lightGallery-master/demo/img/1.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
+             </div>
+             <div class = "invisible item" data-src = "lightGallery-master/demo/img/2.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
+             </div>
+           </div>
+
+           <div id = "3dlightgallery" style = "display: inline-block">
+             <div class = "item preview" data-src = "lightGallery-master/demo/img/1.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
+             </div>
+             <p class = "label" style = "text-align: center">2D Art</p>
+             <div class = "invisible item" data-src = "lightGallery-master/demo/img/2.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
+             </div>
+           </div>
+
+           <div id = "2dlightgallery" style = "display: inline-block">
+             <div class = "item preview" data-src = "lightGallery-master/demo/img/2.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
+             </div>
+             <div class = "invisible item" data-src = "lightGallery-master/demo/img/1.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
+             </div>
+           </div>
+
+           <div id = "worklightgallery" style = "display: inline-block">
+             <div class = "item preview" data-src = "lightGallery-master/demo/img/2.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
+             </div>
+             <div class = "invisible item" data-src = "lightGallery-master/demo/img/1.jpg">
+               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
+             </div>
+           </div>
+           </div>
+
          </section>
        </div>
 
