@@ -32,9 +32,49 @@
         /** automatically scroll to top **/
         $('#bio').fadeIn(2000);
 
-        $("#3dlightgallery, #2dlightgallery, #worklightgallery, #twodlightgallery").lightGallery({
-          selector: '.item',
-          mode: 'lg-slide'
+        $('#twod').click(function() {
+          $(this).lightGallery({
+            dynamic: true,
+            dynamicEl: [{
+              'src': 'lightGallery-master/demo/img/2.jpg',
+              'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
+              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+            }, {
+              'src': 'lightGallery-master/demo/img/1.jpg',
+              'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
+              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+            }]
+          })
+        });
+
+        $('#threed').click(function() {
+          $(this).lightGallery({
+            dynamic: true,
+            dynamicEl: [{
+              'src': 'lightGallery-master/demo/img/2.jpg',
+              'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
+              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+            }, {
+              'src': 'lightGallery-master/demo/img/1.jpg',
+              'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
+              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+            }]
+          })
+        });
+
+        $('#work').click(function() {
+          $(this).lightGallery({
+            dynamic: true,
+            dynamicEl: [{
+              'src': 'lightGallery-master/demo/img/2.jpg',
+              'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
+              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+            }, {
+              'src': 'lightGallery-master/demo/img/1.jpg',
+              'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
+              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+            }]
+          })
         });
 
       /*  $('div').scrollTop(0);
@@ -45,39 +85,13 @@
         $('.center, .preview').hover(
           function() {
             $(this).fadeTo(200,.5);
+            $(this).css('cursor','pointer');
           },
           function() {
             $(this).fadeTo(200,1);
+            $(this).css('cursor','default');
         });
 
-/*        $('#home-but, .navbar-brand').click(function() {
-          $('#home-but').addClass('active');
-          $('#about-but').removeClass('active');
-          $('#gallery-but').removeClass('active');
-          $('#contact-but').removeClass('active');
-        });
-
-        $('#about-but').click(function() {
-          $('#about-but').addClass('active');
-          $('#home-but').removeClass('active');
-          $('#gallery-but').removeClass('active');
-          $('#contact-but').removeClass('active');
-        });
-
-        $('#gallery-but').click(function() {
-          $('#gallery-but').addClass('active');
-          $('#about-but').removeClass('active');
-          $('#home-but').removeClass('active');
-          $('#contact-but').removeClass('active');
-        });
-
-        $('#contact-but').click(function() {
-          $('#contact-but').addClass('active');
-          $('#about-but').removeClass('active');
-          $('#gallery-but').removeClass('active');
-          $('#home-but').removeClass('active');
-        });
-*/
         $('a[href^="#"]').on('click', function(event) {
             var target = $($(this).attr('href'));
             if( target.length ) {
@@ -135,54 +149,16 @@
        <section id = "gallery" class = "container-fluid">
          <h1>gallery</h1>
          <div id = "menu" class = "container-fluid">
-           <div id = "twod" class = "center" style = "display: inline-block">
-             <div class = "vcenter" style = "text-align: center">2D Art</div>
+           <div id = "twod" class = "center preview" style = "display: inline-block">
+             <div class = "vcenter font-main" style = "text-align: center">2D Art</div>
            </div>
-           <div id = "drawing" class = "center" style = "display: inline-block">
-             <div class = "vcenter" style = "text-align: center;">Drawing</div>
+           <div id = "threed" class = "center preview" style = "display: inline-block">
+             <div class = "vcenter font-main" style = "text-align: center;">3D Art</div>
            </div>
-           <div id = "sculpting" class = "center" style = "display: inline-block">
-             <div class = "vcenter" style = "text-align: center;">Sculpting</div>
+           <div id = "work" class = "center preview" style = "display: inline-block">
+             <div class = "vcenter font-main" style = "text-align: center;">Work in Progress</div>
            </div>
-
-           <div id = "twodlightgallery" class = "center" style = "display: block">
-             <div class = "vcenter" style = "text-align: center">2D Art</div>
-             <div class = "invisible item" data-src = "lightGallery-master/demo/img/1.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
-             </div>
-             <div class = "invisible item" data-src = "lightGallery-master/demo/img/2.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
-             </div>
-           </div>
-
-           <div id = "3dlightgallery" style = "display: inline-block">
-             <div class = "item preview" data-src = "lightGallery-master/demo/img/1.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
-             </div>
-             <p class = "label" style = "text-align: center">2D Art</p>
-             <div class = "invisible item" data-src = "lightGallery-master/demo/img/2.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
-             </div>
-           </div>
-
-           <div id = "2dlightgallery" style = "display: inline-block">
-             <div class = "item preview" data-src = "lightGallery-master/demo/img/2.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
-             </div>
-             <div class = "invisible item" data-src = "lightGallery-master/demo/img/1.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
-             </div>
-           </div>
-
-           <div id = "worklightgallery" style = "display: inline-block">
-             <div class = "item preview" data-src = "lightGallery-master/demo/img/2.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-2.jpg" />
-             </div>
-             <div class = "invisible item" data-src = "lightGallery-master/demo/img/1.jpg">
-               <img src = "lightGallery-master/demo/img/thumb-1.jpg" />
-             </div>
-           </div>
-           </div>
+         </div>
 
          </section>
        </div>

@@ -1,11 +1,3 @@
-/**.background-img {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: fixed;
-  z-index: -1;
-} **/
-
 body {
   background: black;
   background-repeat: no-repeat;
@@ -18,7 +10,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-.navbar-brand, #bio-name, h1 {
+.navbar-brand, #bio-name, h1, .font-main {
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
 }
@@ -33,8 +25,10 @@ h1 {
 #home {
   height: 800px;
   width: 100%;
-  background-image: url(../img/galaxy.jpg); /*height:100%; width: 100%;*/
+  background-image: url(../img/home.jpg); /*height:100%; width: 100%;*/
   background-attachment:fixed;
+  background-repeat: no-repeat;
+
 }
 
 #bio {
@@ -61,17 +55,12 @@ h1 {
   background: #ff7f00;
 }
 
-/*#menu{
+#menu {
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
   align-items: center;
-  display: -webkit-flex; /*Safari*/
-  /*-webkit-align-items: center; /*Safari 7.0+*/
-/*  display: flex;
 }
-
-#menu div {
-  -webkit-flex: 1;
-  flex: 1;
-} */
 
 .center {
   min-height: 12em;
@@ -79,14 +68,15 @@ h1 {
   vertical-align: middle;
 }
 
-#twod, #drawing, #sculpting, #twodlightgallery {
-  margin: 3%;
+.preview {
+  margin: auto;
   background: #cc99ff;
   width: 300px;
   height: 300px;
+  border-radius: 30px;
 }
 
-#twod, #drawing, #sculpting, #twodlightgallery, .item {
+.preview {
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -105,28 +95,10 @@ h1 {
   display: none;
 }
 
-/*#3dlightgallery {
-  position: relative;
-}
-
-.preview {
-  position:absolute;
-  left: 0;
-  top: 0;
-}
-
-.label {
-  z-index: 100;
-  position: absolute;
-  left: 150px;
-  top: 350px;
-}*/
-
-#3dlightgallery .label {
-  position:absolute;
-  top: 10px;
-  left: 10px;
-  width: 300px; /*optional, though better have one */
+#threed {
+  background-image: url(../img/menu/preview/2d-thumb.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px auto;
 }
 
 /***RECOGNITION***/
