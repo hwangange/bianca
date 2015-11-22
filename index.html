@@ -30,7 +30,8 @@
       $(document).ready(function(){
 
         /** automatically scroll to top **/
-        $('#bio').fadeIn(2000);
+      /*  $('#bio').fadeIn(2000); */
+      $('#bio').show('puff', 1000);
 
         $('#twod').click(function() {
           $(this).lightGallery({
@@ -38,11 +39,11 @@
             dynamicEl: [{
               'src': 'lightGallery-master/demo/img/2.jpg',
               'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
-              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+              'subHtml': '<h4>Title</h4><p>Description</p>'
             }, {
               'src': 'lightGallery-master/demo/img/1.jpg',
               'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
-              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+              'subHtml': '<h4>Title</h4><p>Description</p>'
             }]
           })
         });
@@ -53,11 +54,11 @@
             dynamicEl: [{
               'src': 'lightGallery-master/demo/img/2.jpg',
               'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
-              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+              'subHtml': '<h4>Title</h4><p>Description</p>'
             }, {
               'src': 'lightGallery-master/demo/img/1.jpg',
               'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
-              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
+              'subHtml': '<h4>Title</h4><p>Description</p>'
             }]
           })
         });
@@ -128,15 +129,16 @@
           </div>
         </nav>
 
-       <div id = "home" class = "container-fluid">
-         <div id = "bio" classs = "col-md-4" style = "float: right">
+       <section id = "home" class = "container-fluid">
+         <div id = "bgImage"><img src = "img/home.jpg"></div>
+         <div id = "bio" style = "float: right">
            <h2 id = "bio-name">bianca chu</h2>
            <p>clay | mixed media | sculpting | painting | drawing</p>
          </div>
 
-       </div>
+       </section>
 
-       <div id = "about" class = "container-fluid">
+       <section id = "about" class = "container-fluid">
          <h1>about</h1>
 
          <img id = "profile" class = "img-responsive" src = "img/profile.jpg" style = "max-height: 500px; float:left; margin: 0 30px 30px 0">
@@ -144,7 +146,7 @@
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-       </div>
+       </section>
 
        <section id = "gallery" class = "container-fluid">
          <h1>gallery</h1>
@@ -159,11 +161,9 @@
              <div class = "vcenter font-main" style = "text-align: center;">Work in Progress</div>
            </div>
          </div>
+       </section>
 
-         </section>
-       </div>
-
-       <div id = "recognition" class = "container-fluid">
+       <section id = "recognition" class = "container-fluid">
          <h1>recognition</h1>
          <dl>
            <dt>2015</dt>
@@ -171,9 +171,9 @@
           <dt>2014</dt>
             <dd>CAB Crew Dance Team: Most Valued Dancer</dd>
          </dl>
-       </div>
+       </section>
 
-       <div id = "contact" class = "container-fluid">
+       <section id = "contact" class = "container-fluid">
          <h1>contact</h1>
 
          <div class = "row">
@@ -217,5 +217,6 @@
 
 
       </div>
+    </section>
   </body>
 </html>
