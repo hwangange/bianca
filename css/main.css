@@ -3,6 +3,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 100%;
+  margin: 0;
+  width: 100vw;
 }
 
 h1 {
@@ -36,16 +39,21 @@ h1 {
 /*  background-attachment:fixed;
   background-repeat: no-repeat; */
   padding: none;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/home.JPG");
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
-#home #bgImage {
+/*#home #bgImage {
   position: relative;
   top: 0;
   left: 0;
   z-index: 1;
   margin: none;
   padding: none;
-}
+} */
 
 #bio {
 /*  margin: 50px 10px 50px 50px;*/
@@ -63,16 +71,15 @@ h1 {
 
 }
 
+#about, #gallery, #recognition {
+  background: #121826;
+}
 /**** ABOUT ****/
 
-#about {
-  background: #171F30;
-}
+
 
 /*** GALLERY ***/
-#gallery {
-  background: #171F30;
-}
+
 
 #menu {
   display: -webkit-flex; /* Safari */
@@ -121,9 +128,7 @@ h1 {
 }
 
 /***RECOGNITION***/
-#recognition {
-  background: #171F30;
-}
+
 
 /*** CONTACT ***/
 
