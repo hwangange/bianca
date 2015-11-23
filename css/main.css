@@ -5,7 +5,7 @@ body {
   background-size: cover;
   height: 100%;
   margin: 0;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 h1 {
@@ -13,9 +13,24 @@ h1 {
   margin-bottom: 30px;
 }
 
+/*#navbarCollapse {
+  background: black;
+} */
+
 .navbar-brand, #bio-name, h1, .font-main {
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
+}
+
+.navbar {
+  background-color: #000; /* background color will be black for all browsers */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+ul.nav li.active a, ul.nav li.active a:hover, ul.nav li a:hover {
+  background: #B2CCE5;
 }
 
 #about, #gallery, #recognition, #contact {
@@ -39,6 +54,7 @@ h1 {
 /*  background-attachment:fixed;
   background-repeat: no-repeat; */
   padding: none;
+  margin: 0;
   width: 100vw;
   height: 100vh;
   background-image: url("../img/home.JPG");
@@ -63,8 +79,8 @@ h1 {
   color: white;
   padding: 10px;
   text-align: center;
-  top: 400px;
-  left: 70%;
+  top: 55vh;
+  left: 75vw;
   margin-right: 5%;
   border-radius: 25px;
   z-index: 2;
