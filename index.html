@@ -13,9 +13,10 @@
       <link href="css/main.css" rel="stylesheet" media="screen">
       <link href = "css/contact.css" rel = "stylesheet" media = "screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
     </head>
 
-    <body data-spy = "scroll" data-target = "#myNavbar" data-offset = "60">
+    <body id = "page-top" data-spy = "scroll" data-target = "#myNavbar" data-offset = "60">
       <script src="js/bootstrap.min.js"></script>
       <!--<script src = "jQuery.min.js"></script> -->
       <script src = "js/jQuery.scrollSpeed.js"></script>
@@ -33,6 +34,8 @@
       <script src = "js/animation.js"></script>
       <link rel="stylesheet" href="css/bondoluo/stylesheet.css" type="text/css" charset="utf-8" />
       <link rel="stylesheet" href="css/infinity/stylesheet.css" type="text/css" charset="utf-8" />
+      <!--<script src = "js/active.js"></script>-->
+      <link href="css/scrolling-nav.css" rel="stylesheet">
       <script>
 
       $(document).ready(function(){
@@ -40,7 +43,7 @@
       $('#bio').show(1000);
 
       /** navbar **/
-      var startY = $('#home').position().top + $('#home').outerHeight();
+      var startY = $('#home').position().top + $('#home').outerHeight() - 50;
       $('.navbar').html($('#nav').html());
       $(window).scroll(function() {
         checkY();
@@ -154,8 +157,8 @@
 
         <nav id="myNavbar" class="navbar nav-pills navbar-fixed-top" role="navigation">
           <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+            <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-expanded="false">
                 <span class="sr-only"> Toggle navigation"</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -163,12 +166,13 @@
               </button>
               <a class="navbar-brand" href="#home">bianca chu</a>
             </div>
-            <div class="navbar-collapse collapse" id="navbarCollapse" aria-expanded="false" style="height: 1px;">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbarCollapse" aria-expanded="false" style="height: 1px;">
               <ul class="nav navbar-nav" id = "mainNav">
-                <li id = "about-but"><a href="#about">about</a></li>
-                <li id = "gallery-but"><a href="#gallery">portfolio and gallery</a></li>
-                <li id = "recognition-but"><a href="#recognition">recognition</a></li>
-                <li id = "contact-but"><a href="#contact">contact</a></li>
+                <li class = "hidden"><a href = "#page-top" class = "page-scroll"></a></li>
+                <li id = "about-but"><a href="#about" class = "page-scroll">about</a></li>
+                <li id = "gallery-but"><a href="#gallery" class = "page-scroll">portfolio and gallery</a></li>
+                <li id = "recognition-but"><a href="#recognition" class = "page-scroll">recognition</a></li>
+                <li id = "contact-but"><a href="#contact" class = "page-scroll">contact</a></li>
               </ul>
               <ul class = "nav navbar-nav navbar-right" id = "socialNav">
                 <li><a id = "carrot" href = "#"><span class="glyphicon glyphicon-chevron-up"></span></a></li>
@@ -197,6 +201,7 @@
 
        <section id = "about" class = "container-fluid">
          <h1>about</h1>
+         <div class = "divider"></div>
 
          <img id = "profile" class = "img-responsive" src = "img/profile.jpg">
           <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -206,7 +211,8 @@
        </section>
 
        <section id = "gallery" class = "container-fluid">
-         <h1>gallery</h1>
+         <h1>portfolio and gallery</h1>
+         <div class = "divider"></div>
          <div id = "menu" class = "container-fluid animated infinite">
            <div id = "twod" class = "center preview" style = "display: inline-block">
              <div class = "vcenter font-main" style = "text-align: center">2D Art</div>
@@ -222,27 +228,35 @@
 
        <section id = "recognition" class = "container-fluid">
          <h1>recognition</h1>
-         <dl>
-           <dt>2015</dt>
-            <dd>Retrospective: Best Ceramics Student</dd>
-          <dt>2014</dt>
-            <dd>CAB Crew Dance Team: Most Valued Dancer</dd>
-         </dl>
+         <div class = "divider"></div>
+         <h2>2015</h2>
+         <p>Retrospective: Best Ceramics Student Award</p>
+         <p>Houston Livestock Show and Rodeo: Award of Excellence
+         <h2>2014</h2>
+         <p>Retrospective: Best Art II Student Award</p>
+         <p>VASE Regional Finalist</p>
+         <h2>2013</h2>
+         <p>Houston Rodeo Art Show: Outstanding Award</p>
+         <h2>2009</h2>
+         <p>Miller Dog Show: Merit Award</p>
+         <p></p>
        </section>
 
        <section id = "contact" class = "container-fluid">
          <h1>contact</h1>
+         <div class = "divider"></div>
          <div style = "text-align: center">
-         <a href = "mailto:bianca.chu@gmail.com"><button class="button  email">bianca.chu@gmail.com</button></a><br/><br/>
-         <a href = "tel:123456789"><button class="button  phone">tel: 123 456 7890</button></a>
+           <a href = "mailto:bianca.chu@gmail.com"><button class="button  email child">bianca.chu@gmail.com</button></a><br/><br/>
+           <a href = "tel:123456789"><button class="button  phone child">tel: 123 456 7890</button></a>
 
-         <div class="buttons animated">
-      <!--    <a href="tel:1111111111" class="phone"><i class="fa fa-mobile-phone"></i></a> -->
-          <a href="https://www.facebook.com/bianca.chu.5" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a href="https://plus.google.com/110791524480999662643" class="google-plus" target="_blank"><i class="fa fa-google-plus"></i></a>
-        <!--  <a href="mailto:bianca.chu@gmail.com" class="email"><i class="fa fa-envelope"></i></a>-->
-          <a href = "https://www.instagram.com" class = "instagram"><i class = "fa fa-instagram"></i></a>
-        </div>
+           <div class="buttons animated">
+        <!--    <a href="tel:1111111111" class="phone"><i class="fa fa-mobile-phone"></i></a> -->
+            <a href="https://www.facebook.com/bianca.chu.5" class="facebook child" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://plus.google.com/110791524480999662643" class="google-plus child" target="_blank"><i class="fa fa-google-plus"></i></a>
+          <!--  <a href="mailto:bianca.chu@gmail.com" class="email"><i class="fa fa-envelope"></i></a>-->
+            <a href = "https://www.instagram.com" class = "instagram child"><i class = "fa fa-instagram"></i></a>
+            </div>
+          </div>
     </section>
     <script type = "text/javascript" src = "js/skrollr.min.js"></script>
     <script type = "text/javascript">
@@ -266,5 +280,8 @@
         });
       });
     </script> -->
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
   </body>
 </html>
