@@ -86,10 +86,14 @@ h1 {
   border-top-color: #B2CCE5;
 }
 
+#about h1 {
+  opacity: 0;
+}
+
 /**** HOME PAGE ***/
 
 #home {
-  background-image: url(../img/home.jpg); /*height:100%; width: 100%;*/
+  background-image: url(../img/home.JPG); /*height:100%; width: 100%;*/
   background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: 100%, cover;
@@ -159,6 +163,9 @@ h1 {
   width: 300px;
   height: 300px;
   border-radius: 30px;
+  border-style: solid;
+  border-color: white;
+  border-width: medium;
 }
 
 .preview {
@@ -180,8 +187,21 @@ h1 {
   display: none;
 }
 
-#twod, #threed, #work {
-  background-image: url(../img/menu/preview/2d-thumb.jpg);
+#threed {
+  background-image: url(../img/menu/3d/bowl1.jpg);
+  background-size: cover;
+  object-fit: cover;
+}
+
+#threed p {
+  padding-left: 50px;
+  font-size: 150%;
+}
+
+#twod, #work {
+  background: url(../img/menu/preview/2d-thumb.jpg) no-repeat center;
+}
+#twod, #work {
   background-repeat: no-repeat;
   background-size: 300px auto;
 }
