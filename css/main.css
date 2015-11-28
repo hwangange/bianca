@@ -4,8 +4,17 @@ body {
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
+  width: 100%;
   margin: 0;
   max-width: 100vw;
+  position: relative; /*required*/
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -29,13 +38,30 @@ h1 {
   filter: none;
 }
 
-ul.nav li.active a, ul.nav li.active a:hover, ul.nav li a:hover {
+
+  /*.navbar .navbar-nav .open .dropdown-menu ul.nav > li.active > a,
+  .navbar .navbar-nav .open .dropdown-menu ul.nav > li.active > a:hover,
+  .navbar .navbar-nav .open .dropdown-menu ul.nav > li.active > a:focus {
+    background: #0088cc;
+  } */
+
+
+#mainNav li.active a, #mainNav li.active a:hover, #mainNav li a:hover, #mainNav li a:focus {
   background: #B2CCE5;
+}
+
+#socialNav li.active a, #socialNav li.active a:hover, #socialNav li a:hover, #socialNav li a:focus {
+  background: #000;
+}
+
+.icon-facebook:before {
+    content: "\e902";
 }
 
 #about, #gallery, #recognition, #contact {
   padding:50px; /*50px*/
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 #about, #gallery, #recognition {
@@ -50,16 +76,19 @@ ul.nav li.active a, ul.nav li.active a:hover, ul.nav li a:hover {
 /**** HOME PAGE ***/
 
 #home {
-/*  background-image: url(../img/home.jpg); /*height:100%; width: 100%;*/
-/*  background-attachment:fixed;
-  background-repeat: no-repeat; */
+  background-image: url(../img/home.jpg); /*height:100%; width: 100%;*/
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
   padding: none;
   margin: 0;
-  width: 100vw;
+  left:0;
+  top: 0;
+  max-width: 100vw;
   height: 100vh;
-  background-image: url("../img/home.JPG");
+/*  background-image: url("../img/home.JPG");
   background-repeat: no-repeat;
-  background-size: 100vw;
+  background-size: 100vw; */
 }
 
 /*#home #bgImage {
@@ -91,8 +120,6 @@ ul.nav li.active a, ul.nav li.active a:hover, ul.nav li a:hover {
   background: #121826;
 }
 /**** ABOUT ****/
-
-
 
 /*** GALLERY ***/
 
@@ -151,7 +178,88 @@ ul.nav li.active a, ul.nav li.active a:hover, ul.nav li a:hover {
 #contact {
   background: #458b00;
   padding-bottom: 100px;
+  color: white;
 }
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #121826;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+.buttons > a {
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  z-index: 1;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0 none;
+  line-height: 55px;
+  margin: 10px;
+  width: 55px;
+  height: 55px;
+}
+.buttons > a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0 none;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid white;
+}
+.buttons > a:hover::before {
+  background: #02c39a;
+  border-radius: 0;
+  border: 0;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.buttons > a.phone:hover::before {
+  background: #02c39a;
+}
+
+.buttons > a.facebook:hover::before {
+  background: #3b5998;
+}
+
+.buttons > a.google-plus:hover::before {
+  background: #d95232;
+}
+
+.buttons > a.email:hover::before {
+  background: #02c39a;
+}
+
+.buttons > a.instagram:hover::before {
+  background: #125688;
+}
+
 
 /** ABOUT PAGE ***/
 #about {

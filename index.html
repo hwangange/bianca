@@ -26,12 +26,29 @@
 
       <script src = "lightGallery-master/src/js/lg-thumbnail.js"></script>
       <script src = "lightGallery-master/src/js/lg-fullscreen.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
       <script>
       $(document).ready(function(){
 
         /** automatically scroll to top **/
       /*  $('#bio').fadeIn(2000); */
       $('#bio').show('puff', 1000);
+      var startY = $('#home').position().top + $('#home').outerHeight();
+      $('.navbar').html($('#nav').html());
+      $(window).scroll(function() {
+        checkY();
+      });
+
+      function checkY() {
+        if( $(window).scrollTop() > startY ){
+          $('.navbar').show("slow");
+        }else {
+          $('.navbar').fadeOut("slow");
+        }
+      }
+
+      checkY();
 
         $('#twod').click(function() {
           $(this).lightGallery({
@@ -84,8 +101,23 @@
         }, 1000);*/
 
         $('#carrot').click(function() {
-          $('#myNavbar').slideToggle();
+          $('div').scrollTop(0);
+          $('html, body').animate({
+                scrollTop: 0
+          }, 1000);
         });
+
+      /*  $('#socialNav li a').hover(
+          function() {
+            $(this).effect("size", {
+              to: { width: 30, height: 30 }
+            });
+          },
+          function(){
+            $(this).effect("size", {
+              to: { width: 25, height: 25 }
+          });
+        }); */
 
         $('.center, .preview').hover(
           function() {
@@ -107,6 +139,14 @@
             }
         });
 
+      /*  $('li a').focusin(function() {
+          $(this).css("background","#B2CCE5");
+        });
+
+        $('li a').focusout(function() {
+          $(this).css("background","#000");
+        });*/
+
       });
 
       </script>
@@ -123,14 +163,14 @@
               <a class="navbar-brand" href="#home">bianca chu</a>
             </div>
             <div class="navbar-collapse collapse" id="navbarCollapse" aria-expanded="false" style="height: 1px;">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav" id = "mainNav">
                 <li id = "about-but"><a href="#about">about</a></li>
                 <li id = "gallery-but"><a href="#gallery">portfolio and gallery</a></li>
                 <li id = "recognition-but"><a href="#recognition">recognition</a></li>
                 <li id = "contact-but"><a href="#contact">contact</a></li>
               </ul>
-              <ul class = "nav navbar-nav navbar-right">
-                <li><a id = "carrot" href = "#"><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+              <ul class = "nav navbar-nav navbar-right" id = "socialNav">
+                <li><a id = "carrot" href = "#"><span class="glyphicon glyphicon-chevron-up"></span></a></li>
                 <li><a href = "mailto:bianca.chu@gmail.com"><img src = "img/email-icon.png" width = "25" height = "25"></a></li>
                 <li><a href = "http://facebook.com"><img src = "img/facebook-logo.png" width = "25" height = "25"></a></li>
                 <li><a href = "http://instagram.com"><img src = "img/instagram-logo.png" width = "25" height = "25"></a></li>
@@ -191,48 +231,18 @@
 
        <section id = "contact" class = "container-fluid">
          <h1>contact</h1>
+         <div style = "text-align: center">
+           <h4><a href = "tel:1111111111">Phone: 111-111-1111</a></h4>
+           <h4><a href = "mailto:bianca.chu@gmail.com">Email: bianca.chu@gmail.com</a></h4>
+         </p>
 
-         <div class = "row">
-           <div class = "col-md-3">
-             <p>Send me a message!</p>
-             <p>Phone: 111-111-1111</p>
-             <p>Email: bianca.chu@gmail.com</p>
-             <p><a href = "https://www.facebook.com/bianca.chu.5">Facebook</a></p>
-           </div>
-
-           <div class = "col-md-9">
-             <form action="" class="form-horizontal">
-               <div class="form-group">
-                 <label for="user-name" class = "col-lg-2 control-label">Name</label>
-                 <div class = "col-lg-10">
-                   <input type="text" class="form-control" id="user-name" placeholder="Enter your name" size = "20">
-                 </div>
-               </div> <!--End form group-->
-
-               <div class="form-group">
-                 <label for="user-email" class = "col-lg-2 control-label">Email</label>
-                 <div class = "col-lg-10">
-                   <input type="text" class="form-control" id="user-email" placeholder="Enter your email address" size = "20">
-                 </div>
-               </div> <!--End form group-->
-
-               <div class="form-group">
-                 <label for="user-message" class = "col-lg-2 control-label">Message</label>
-                 <div class = "col-lg-10">
-                   <textarea name="user-message" id="user-message" class="form-control" cols="20" rows="10" placeholder="Enter your message."></textarea>
-                 </div>
-               </div> <!--End form group-->
-
-               <div class = "form-group">
-                 <div class="col-lg-10 col-lg-offset-2">
-                   <button type = "submit" class = "btn btn-primary">Submit</button>
-                 </div>
-               </div>
-             </form>
-           </div>
-
-
-      </div>
+         <div class="buttons animated">
+      <!--    <a href="tel:1111111111" class="phone"><i class="fa fa-mobile-phone"></i></a> -->
+          <a href="https://www.facebook.com/bianca.chu.5" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://plus.google.com/110791524480999662643" class="google-plus" target="_blank"><i class="fa fa-google-plus"></i></a>
+        <!--  <a href="mailto:bianca.chu@gmail.com" class="email"><i class="fa fa-envelope"></i></a>-->
+          <a href = "https://www.instagram.com" class = "instagram"><i class = "fa fa-instagram"></i></a>
+        </div>
     </section>
   </body>
 </html>
