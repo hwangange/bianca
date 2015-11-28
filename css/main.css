@@ -68,9 +68,14 @@ h1 {
   color: white;
 }
 
-#home, #about, #gallery, #recognition {
+#about, #gallery, #recognition {
   border-bottom-style: solid;
   border-bottom-color: #B2CCE5;
+}
+
+#about {
+  border-top-style: solid;
+  border-top-color: #B2CCE5;
 }
 
 /**** HOME PAGE ***/
@@ -187,77 +192,6 @@ a, a:hover {
 
 a:hover {
   color: #121826;
-}
-
-.buttons {
-  margin-top: 20px;
-}
-.buttons > a {
-  position: relative;
-  font-size: 25px;
-  text-align: center;
-  display: inline-block;
-  color: white;
-  z-index: 1;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
-  border: 0 none;
-  line-height: 55px;
-  margin: 10px;
-  width: 55px;
-  height: 55px;
-}
-.buttons > a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 0 none;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s all ease-in-out;
-  -moz-transition: 0.5s all ease-in-out;
-  -o-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 1px solid white;
-}
-.buttons > a:hover::before {
-  background: #02c39a;
-  border-radius: 0;
-  border: 0;
-  -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-
-.buttons > a.phone:hover::before {
-  background: #02c39a;
-}
-
-.buttons > a.facebook:hover::before {
-  background: #3b5998;
-}
-
-.buttons > a.google-plus:hover::before {
-  background: #d95232;
-}
-
-.buttons > a.email:hover::before {
-  background: #02c39a;
-}
-
-.buttons > a.instagram:hover::before {
-  background: #125688;
 }
 
 

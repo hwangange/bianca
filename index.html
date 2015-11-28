@@ -10,6 +10,7 @@
       <!-- Optional Bootstrap theme -->
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
       <link href="css/main.css" rel="stylesheet" media="screen">
+      <link href = "css/contact.css" rel = "stylesheet" media = "screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
 
@@ -27,13 +28,14 @@
       <script src = "lightGallery-master/src/js/lg-thumbnail.js"></script>
       <script src = "lightGallery-master/src/js/lg-fullscreen.js"></script>
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
       <script>
       $(document).ready(function(){
 
         /** automatically scroll to top **/
       /*  $('#bio').fadeIn(2000); */
       $('#bio').show('puff', 1000);
+
+      /** navbar **/
       var startY = $('#home').position().top + $('#home').outerHeight();
       $('.navbar').html($('#nav').html());
       $(window).scroll(function() {
@@ -94,11 +96,6 @@
             }]
           })
         });
-
-      /*  $('div').scrollTop(0);
-        $('html, body').animate({
-            scrollTop: 0
-        }, 1000);*/
 
         $('#carrot').click(function() {
           $('div').scrollTop(0);
@@ -185,7 +182,7 @@
           </div>
         </nav>
 
-       <section id = "home" class = "container-fluid">
+       <section id = "home" class = "container-fluid" data-0 = "opacity:1" data-1000 = "opacity:0">
          <!--<div id = "bgImage"><img src = "img/home.JPG"></div> -->
          <div id = "bio" style = "float: right">
            <h1 id = "bio-name" style = "font-size: 50px">bianca chu</h2>
@@ -232,9 +229,8 @@
        <section id = "contact" class = "container-fluid">
          <h1>contact</h1>
          <div style = "text-align: center">
-           <h4><a href = "tel:1111111111">Phone: 111-111-1111</a></h4>
-           <h4><a href = "mailto:bianca.chu@gmail.com">Email: bianca.chu@gmail.com</a></h4>
-         </p>
+         <a href = "mailto:bianca.chu@gmail.com"><button class="button  email">bianca.chu@gmail.com</button></a><br/><br/>
+         <a href = "tel:123456789"><button class="button  phone">tel: 123 456 7890</button></a>
 
          <div class="buttons animated">
       <!--    <a href="tel:1111111111" class="phone"><i class="fa fa-mobile-phone"></i></a> -->
@@ -244,5 +240,17 @@
           <a href = "https://www.instagram.com" class = "instagram"><i class = "fa fa-instagram"></i></a>
         </div>
     </section>
+    <script type = "text/javascript" src = "js/skrollr.min.js"></script>
+    <script type = "text/javascript">
+      window.onload = function() {
+        skrollr.init({
+          forceHeight: false
+        });
+      }
+      /*init Skrollr*/
+      /*var s = skrollr.init();*/
+      /*refresh Skrollr after resizing our sections*/
+      /*s.refresh($('#home')); */
+    </script>
   </body>
 </html>
