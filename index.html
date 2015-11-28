@@ -9,6 +9,7 @@
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- Optional Bootstrap theme -->
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/animate.css">
       <link href="css/main.css" rel="stylesheet" media="screen">
       <link href = "css/contact.css" rel = "stylesheet" media = "screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -28,12 +29,13 @@
       <script src = "lightGallery-master/src/js/lg-thumbnail.js"></script>
       <script src = "lightGallery-master/src/js/lg-fullscreen.js"></script>
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+      <script src = "js/animation.js"></script>
       <script>
+
       $(document).ready(function(){
 
-        /** automatically scroll to top **/
-      /*  $('#bio').fadeIn(2000); */
-      $('#bio').show('puff', 1000);
+      $('#bio').show(1000);
 
       /** navbar **/
       var startY = $('#home').position().top + $('#home').outerHeight();
@@ -194,16 +196,16 @@
        <section id = "about" class = "container-fluid">
          <h1>about</h1>
 
-         <img id = "profile" class = "img-responsive" src = "img/profile.jpg" style = "max-height: 500px; float:left; margin: 0 30px 30px 0">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-           <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-           <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+         <img id = "profile" class = "img-responsive" src = "img/profile.jpg">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
        </section>
 
        <section id = "gallery" class = "container-fluid">
          <h1>gallery</h1>
-         <div id = "menu" class = "container-fluid">
+         <div id = "menu" class = "container-fluid animated infinite">
            <div id = "twod" class = "center preview" style = "display: inline-block">
              <div class = "vcenter font-main" style = "text-align: center">2D Art</div>
            </div>
@@ -252,5 +254,15 @@
       /*refresh Skrollr after resizing our sections*/
       /*s.refresh($('#home')); */
     </script>
+
+  <!--  <script src="js/viewportchecker.js"></script>
+    <script type = "text/javascript">
+      $(document).ready(function() {
+        $('#menu').addClass("hidden").viewportChecker({
+          classToAdd: 'visible animated fadeIn',
+          offset: 100
+        });
+      });
+    </script> -->
   </body>
 </html>

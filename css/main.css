@@ -22,6 +22,14 @@ h1 {
   margin-bottom: 30px;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 /*#navbarCollapse {
   background: black;
 } */
@@ -128,12 +136,15 @@ h1 {
 
 /*** GALLERY ***/
 
-
 #menu {
   display: -webkit-flex; /* Safari */
   -webkit-align-items: center; /* Safari 7.0+ */
   display: flex;
   align-items: center;
+}
+
+#twod, #threed, #work {
+  opacity: 0;
 }
 
 .center {
@@ -200,6 +211,20 @@ a:hover {
   word-wrap: break-word;
 }
 
+#profile {
+  max-height: 500px;
+  float:left;
+  margin: 0 30px 30px 0;
+  opacity: 0;
+}
+
+#about p {
+  opacity: 0;
+}
+
+.firstAnimation {
+  opacity: 1;
+}
 
 /**LINKS**/
 a {
