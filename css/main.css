@@ -34,7 +34,20 @@ h1 {
   background: black;
 } */
 
-.navbar-brand, #bio-name, h1, .font-main {
+/*.navbar-brand, h1, .font-main {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+} */
+
+#home p, .navbar {
+  font-family: infinityregular;
+}
+
+h1, #bio-name {
+  font-family: bondoluo_peekthin;
+}
+
+.preview {
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
 }
@@ -46,6 +59,10 @@ h1 {
   filter: none;
 }
 
+#mainNav li {
+  padding-left: 50px;
+  font-size: 120%;
+}
 
   /*.navbar .navbar-nav .open .dropdown-menu ul.nav > li.active > a,
   .navbar .navbar-nav .open .dropdown-menu ul.nav > li.active > a:hover,
@@ -94,7 +111,7 @@ h1 {
 
 #home {
   background-image: url(../img/home.JPG); /*height:100%; width: 100%;*/
-  background-attachment:fixed;
+  /*background-attachment:fixed; */
   background-repeat: no-repeat;
   background-size: 100%, cover;
   padding: none;
