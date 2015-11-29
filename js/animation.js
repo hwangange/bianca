@@ -8,8 +8,11 @@ $(window).scroll(function() {
     }
 
     var aboutcontent = function() {
-      $("#about").find('p').delay(1000).animate({opacity:1, left:0},'slow');
-      $("#about").find('img').delay(1600).animate({opacity:1, right:0},'slow');
+      $("#about").find('p').eq(0).delay(1000).animate({opacity:1, left:0},'slow');
+      $("#about").find('p').eq(1).delay(1500).animate({opacity:1, left:0},'slow');
+      $("#about").find('p').eq(2).delay(2000).animate({opacity:1, left:0},'slow');
+      $("#about").find('p').eq(3).delay(2500).animate({opacity:1, left:0},'slow');
+      $("#about").find('img').delay(3000).animate({opacity:1, right:0}, 2000);
     };
 
     var gallery = function() {
@@ -17,9 +20,9 @@ $(window).scroll(function() {
     }
 
     var gallerycontent = function() {
-      $('#twod').delay(500).animate({opacity:1}, 'slow');
-      $('#threed').delay(1000).animate({opacity:1}, 'slow');
-      $('#work').delay(1500).animate({opacity:1}, 'slow');
+      $('#twod').delay(1000).animate({opacity:1}, 'slow');
+      $('#threed').delay(1500).animate({opacity:1}, 'slow');
+      $('#work').delay(2000).animate({opacity:1}, 'slow');
     };
 
     var recognition = function() {
@@ -33,10 +36,15 @@ $(window).scroll(function() {
 
     var contact = function() {
       $('#contact').find('h1').delay(500).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(0).delay(750).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(1).delay(1000).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(2).delay(1250).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(3).delay(1500).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(4).delay(1750).animate({opacity:1}, 'slow');
     }
 
     var contactcontent = function() {
-      
+
     }
 
     if(windowWidth <= 549) {

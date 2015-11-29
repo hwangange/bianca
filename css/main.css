@@ -258,10 +258,16 @@ h2 {
 /*** CONTACT ***/
 
 #contact {
-  background: #458b00;
+  background: #121826;
   padding-bottom: 100px;
   color: white;
 }
+
+#contact a {
+  opacity: 0;
+}
+
+/** LINKS**/
 
 a, a:hover {
   text-decoration: none;
