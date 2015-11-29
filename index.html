@@ -10,10 +10,10 @@
       <!-- Optional Bootstrap theme -->
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
       <link rel="stylesheet" href="css/animate.css">
-      <link href="css/main.css" rel="stylesheet" media="screen">
       <link href = "css/contact.css" rel = "stylesheet" media = "screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+      <link href="css/main.css" rel="stylesheet" media="screen">
     </head>
 
     <body id = "page-top" data-spy = "scroll" data-target = "#myNavbar" data-offset = "60">
@@ -36,12 +36,14 @@
       <link rel="stylesheet" href="css/infinity/stylesheet.css" type="text/css" charset="utf-8" />
       <!--<script src = "js/active.js"></script>-->
       <link href="css/scrolling-nav.css" rel="stylesheet">
+      <script src = "js/gallery.js"></script>
       <script>
 
       $(document).ready(function(){
 
       $('#bio').show(1000);
 
+      /*$('body').scrollspy({target: ".navbar", offset: 50}); */
       /** navbar **/
       var startY = $('#home').position().top + $('#home').outerHeight() - 50;
       $('.navbar').html($('#nav').html());
@@ -58,51 +60,6 @@
       }
 
       checkY();
-
-        $('#twod').click(function() {
-          $(this).lightGallery({
-            dynamic: true,
-            dynamicEl: [{
-              'src': 'lightGallery-master/demo/img/2.jpg',
-              'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
-              'subHtml': '<h4>Title</h4><p>Description</p>'
-            }, {
-              'src': 'lightGallery-master/demo/img/1.jpg',
-              'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
-              'subHtml': '<h4>Title</h4><p>Description</p>'
-            }]
-          })
-        });
-
-        $('#threed').click(function() {
-          $(this).lightGallery({
-            dynamic: true,
-            dynamicEl: [{
-              'src': 'lightGallery-master/demo/img/2.jpg',
-              'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
-              'subHtml': '<h4>Title</h4><p>Description</p>'
-            }, {
-              'src': 'lightGallery-master/demo/img/1.jpg',
-              'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
-              'subHtml': '<h4>Title</h4><p>Description</p>'
-            }]
-          })
-        });
-
-        $('#work').click(function() {
-          $(this).lightGallery({
-            dynamic: true,
-            dynamicEl: [{
-              'src': 'lightGallery-master/demo/img/2.jpg',
-              'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
-              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
-            }, {
-              'src': 'lightGallery-master/demo/img/1.jpg',
-              'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
-              'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwoood Jetty on Coniston Water an archive shot similar to an old post but a litter later on </p>'
-            }]
-          })
-        });
 
         $('#carrot').click(function() {
           $('div').scrollTop(0);
@@ -138,7 +95,7 @@
             if( target.length ) {
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top /*-50*/
+                    scrollTop: target.offset().top
                 }, 1000);
             }
         });
@@ -149,7 +106,7 @@
 
         $('li a').focusout(function() {
           $(this).css("background","#000");
-        });*/
+        }); */
 
       });
 
@@ -190,7 +147,7 @@
           </div>
         </nav>
 
-       <section id = "home" class = "container-fluid" data-0 = "opacity:1" data-1000 = "opacity:0">
+       <section id = "home" class = "container-fluid" data-0 = "opacity:.8" data-1000 = "opacity:0">
          <!--<div id = "bgImage"><img src = "img/home.JPG"></div> -->
          <div id = "bio" style = "float: right">
            <h1 id = "bio-name" style = "font-size: 50px">bianca chu</h2>
@@ -284,5 +241,31 @@
 
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+  <!--  <script>
+      $(document).ready(function(){
+      // Add scrollspy to <body>
+      $('body').scrollspy({target: ".navbar", offset: 50});
+
+      // Add smooth scrolling on all links inside the navbar
+      $("#myNavbar a").on('click', function(event) {
+
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      });
+      });
+    </script> -->
   </body>
 </html>

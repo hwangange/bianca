@@ -110,7 +110,7 @@ h2 {
 }
 
 #about, #gallery, #recognition, #contact {
-  padding:100px; /*50px*/
+  padding: 50px 100px 50px 100px; /*50px*/
   min-height: 100%;
   min-width: 100%;
 }
@@ -166,7 +166,7 @@ h2 {
   position: absolute;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 19px;
   text-align: center;
   top: 55vh;
   left: 75vw;
@@ -231,7 +231,7 @@ h2 {
 }
 
 #threed {
-  background-image: url(../img/menu/3d/bowl1.jpg);
+  background-image: url(../img/menu/preview/bowl-thumb.jpg);
   background-size: cover;
   object-fit: cover;
 }

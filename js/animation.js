@@ -13,6 +13,7 @@ $(window).scroll(function() {
       $("#about").find('p').eq(2).delay(2000).animate({opacity:1, left:0},'slow');
       $("#about").find('p').eq(3).delay(2500).animate({opacity:1, left:0},'slow');
       $("#about").find('img').delay(3000).animate({opacity:1, right:0}, 2000);
+  /*    $("#about").find('img').delay(3000).removeClass("hidden", 1000, "drop"); */
     };
 
     var gallery = function() {
