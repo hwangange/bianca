@@ -115,6 +115,21 @@ h2 {
   min-width: 100%;
 }
 
+@media only screen and (max-device-width: 768px) {
+  #about, #gallery, #recognition, #contact {
+    padding: 50px;
+  }
+
+  #profile {
+    display: block;
+    float: none;
+  }
+
+  div.preview {
+    display: block;
+  }
+}
+
 #about, #gallery, #recognition {
   color: white;
 }
@@ -139,7 +154,8 @@ h2 {
   background-image: url(../img/home.JPG); /*height:100%; width: 100%;*/
   background-attachment:fixed;
   background-repeat: no-repeat;
-  background-size: 100%, cover;
+/*  background-size: 100%, cover;*/
+  background-size: cover;
   padding: none;
   margin: 0;
   left:0;
