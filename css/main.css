@@ -221,7 +221,7 @@ h2 {
 }
 
 /* Grow */
-.hvr-grow {
+.hvr-grow, .hvr-grow-small {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -240,6 +240,10 @@ h2 {
   transform: scale(1.1);
 }
 
+.hvr-grow-small:hover, .hvr-grow-small:focus, .hvr-grow-small:active {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
 
 .vcenter {
     -webkit-flex: 1;
