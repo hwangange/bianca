@@ -37,11 +37,11 @@ $(window).scroll(function() {
 
     var contact = function() {
       $('#contact').find('h1').delay(500).animate({opacity:1}, 'slow');
-      $('#contact').find('a').eq(0).delay(750).animate({opacity:1}, 'slow');
-      $('#contact').find('a').eq(1).delay(1000).animate({opacity:1}, 'slow');
-      $('#contact').find('a').eq(2).delay(1250).animate({opacity:1}, 'slow');
-      $('#contact').find('a').eq(3).delay(1500).animate({opacity:1}, 'slow');
-      $('#contact').find('a').eq(4).delay(1750).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(0).delay(1000).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(1).delay(1250).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(2).delay(1500).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(3).delay(1750).animate({opacity:1}, 'slow');
+      $('#contact').find('a').eq(4).delay(2000).animate({opacity:1}, 'slow');
     }
 
     var contactcontent = function() {
