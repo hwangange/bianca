@@ -37,11 +37,15 @@
       <!--<script src = "js/active.js"></script>-->
       <link href="css/scrolling-nav.css" rel="stylesheet">
       <script src = "js/gallery.js"></script>
+      <script src = "js/wow.min.js"></script>
+      <link href="css/hover.css" rel="stylesheet" media="all">
       <script>
+
+      new WOW().init();
 
       $(document).ready(function(){
 
-      $('#bio').show(1000);
+    /*  $('#bio').show(1000);*/
 
       /*$('body').scrollspy({target: ".navbar", offset: 50}); */
       /** navbar **/
@@ -80,13 +84,23 @@
           });
         }); */
 
-        $('.center, .preview').hover(
+      /*  $('.center, .preview').hover(
           function() {
             $(this).fadeTo(200,.5);
             $(this).css('cursor','pointer');
           },
           function() {
             $(this).fadeTo(200,1);
+            $(this).css('cursor','default');
+        }); */
+
+        $('.center, .preview').hover(
+          function() {
+          /*  $(this).addClass("animated pulse"); */
+            $(this).css('cursor','pointer');
+          },
+          function() {
+          /*  $(this).removeClass("animated pulse"); */
             $(this).css('cursor','default');
         });
 
@@ -147,9 +161,9 @@
           </div>
         </nav>
 
-       <section id = "home" class = "container-fluid" data-0 = "opacity:.8" data-1000 = "opacity:0">
+       <section id = "home" class = "container-fluid" data-0 = "opacity:1" data-1000 = "opacity:0">
          <!--<div id = "bgImage"><img src = "img/home.JPG"></div> -->
-         <div id = "bio" style = "float: right">
+         <div id = "bio" class = "wow bounceInUp" style = "float: right">
            <h1 id = "bio-name" style = "font-size: 50px">bianca chu</h2>
            <p>clay | mixed media | sculpting | painting | drawing</p>
          </div>
@@ -172,13 +186,13 @@
          <h1>portfolio and gallery</h1>
          <div class = "divider"></div>
          <div id = "menu" class = "container-fluid animated infinite">
-           <div id = "twod" class = "center preview" style = "display: inline-block">
+           <div id = "twod" class = "center preview hvr-grow" style = "display: inline-block">
              <div class = "vcenter font-main" style = "text-align: center">2D Art</div>
            </div>
-           <div id = "threed" class = "center preview" style = "display: inline-block">
+           <div id = "threed" class = "center preview hvr-grow" style = "display: inline-block">
              <div class = "vcenter font-main" ><p>3D Art</p></div>
            </div>
-           <div id = "work" class = "center preview" style = "display: inline-block">
+           <div id = "work" class = "center preview hvr-grow" style = "display: inline-block">
              <div class = "vcenter font-main" style = "text-align: center;">Work in Progress</div>
            </div>
          </div>
