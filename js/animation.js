@@ -51,15 +51,15 @@ $(window).scroll(function() {
     if(windowWidth <= 549) {
       if(windowScrollTop > 50) {
         about();
-      }if(windowScrollTop > 150) {
+      }if(windowScrollTop > 75) {
         aboutcontent();
-      }if(windowScrollTop>100) {
+      }if(windowScrollTop>200) {
         gallery();
-      }if(windowScrollTop > 150) {
+      }if(windowScrollTop > 225) {
         gallerycontent();
-      }if(windowScrollTop > 500) {
+      }if(windowScrollTop > 400) {
         recognitioncontent();
-      }if(windowScrollTop > 600) {
+      }if(windowScrollTop > 425) {
         contact();
       }
     } else if(windowWidth > 549 && windowHeight <= 991) {
@@ -91,7 +91,7 @@ $(window).scroll(function() {
         recognition();
       }if(windowScrollTop > 1700) {
         recognitioncontent();
-      }if(windowScrollTop > 2000) {
+      }if(windowScrollTop > 2200) {
         contact();
       }
     }
