@@ -1,20 +1,28 @@
 $(document).ready(function() {
-  $('#twod').click(function() {
+  $('#twod').find('a').click(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        'src': 'lightGallery-master/demo/img/2.jpg',
-        'thumb': "lightGallery-master/demo/img/thumb-2.jpg",
-        'subHtml': '<h4>Title</h4><p>Description</p>'
+        'src': 'img/menu/2d/butterfly.jpg',
+        'thumb': "img/menu/2d/butterfly.jpg",
+        'subHtml': '<h4>Butterfly</h4>'
       }, {
-        'src': 'lightGallery-master/demo/img/1.jpg',
-        'thumb': 'lightGallery-master/demo/img/thumb-1.jpg',
-        'subHtml': '<h4>Title</h4><p>Description</p>'
+        'src': 'img/menu/2d/fruit.jpg',
+        'thumb': 'img/menu/2d/fruit.jpg',
+        'subHtml': '<h4>Fruit</h4>'
+      }, {
+        'src': 'img/menu/2d/pop.jpg',
+        'thumb': 'img/menu/2d/pop.jpg',
+        'subHtml': '<h4>Soda Can</h4>'
+      }, {
+        'src': 'img/menu/2d/bird.jpg',
+        'thumb': 'img/menu/2d/bird.jpg',
+        'subHtml': '<h4>Bird</h4>'
       }]
     })
   });
 
-  $('#threed').click(function() {
+  $('#threed').find('a').click(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
@@ -53,7 +61,7 @@ $(document).ready(function() {
     })
   });
 
-  $('#work').click(function() {
+  $('#work').find('a').click(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{

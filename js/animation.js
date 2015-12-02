@@ -4,6 +4,7 @@ $(window).scroll(function() {
     var windowScrollTop = $(this).scrollTop();
 
     var about = function() {
+      $("#carrot").animate({opacity:1}, 'slow');
       $("#about").find('h1').delay(500).animate({opacity:1}, 'slow');
     }
 

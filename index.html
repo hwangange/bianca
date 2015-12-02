@@ -13,6 +13,7 @@
       <link href = "css/contact.css" rel = "stylesheet" media = "screen">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Merriweather' rel='stylesheet' type='text/css'>
       <link href="css/main.css" rel="stylesheet" media="screen">
     </head>
 
@@ -91,25 +92,21 @@
           });
         }); */
 
-      /*  $('.center, .preview').hover(
+        $('.preview').find('a').hover(
           function() {
-            $(this).fadeTo(200,.5);
             $(this).css('cursor','pointer');
           },
           function() {
-            $(this).fadeTo(200,1);
-            $(this).css('cursor','default');
-        }); */
-
-        $('.center, .preview').hover(
-          function() {
-          /*  $(this).addClass("animated pulse"); */
-            $(this).css('cursor','pointer');
-          },
-          function() {
-          /*  $(this).removeClass("animated pulse"); */
             $(this).css('cursor','default');
         });
+
+      /*  $('.center, .preview').hover(
+          function() {
+            $(this).css('cursor','pointer');
+          },
+          function() {
+            $(this).css('cursor','default');
+        }); */
 
         $('a[href^="#"]').on('click', function(event) {
             var target = $($(this).attr('href'));
@@ -153,7 +150,7 @@
                 <li id = "contact-but"><a href="#contact" class = "page-scroll hvr-grow">contact</a></li>
               </ul>
               <ul class = "nav navbar-nav navbar-right" id = "socialNav">
-                <li><a id = "carrot" href = "#"><span class="glyphicon glyphicon-chevron-up hvr-grow-small"></span></a></li>
+                <li><a id = "carrot" href = "#" style = "opacity:0"><span class="glyphicon glyphicon-chevron-up hvr-grow-small"></span></a></li>
                 <li><a href = "mailto:bianca.chu@gmail.com"><img class = "hvr-grow-small" src = "img/email-icon.png" width = "25" height = "25"></a></li>
                 <li><a href = "http://facebook.com"><img class = "hvr-grow-small" src = "img/facebook-logo.png" width = "25" height = "25"></a></li>
                 <li><a href = "http://instagram.com"><img class = "hvr-grow-small" src = "img/instagram-logo.png" width = "25" height = "25"></a></li>
@@ -188,7 +185,7 @@
        <section id = "about" class = "container-fluid">
          <h1>about</h1>
          <div class = "divider wow slideInLeft"></div>
-         <img id = "profile" class = "img-responsive wow bounceIn" src = "img/profile.jpg">
+         <img id = "profile" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300">
           <p>Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
           <p>Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
           <p>Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
@@ -196,21 +193,50 @@
 
        </section>
 
-       <section id = "gallery" class = "container-fluid">
+    <!--   <section id = "gallery" class = "container-fluid">
          <h1>portfolio and gallery</h1>
          <div class = "divider wow slideInLeft"></div>
          <div id = "menu" class = "container-fluid animated infinite">
-           <div id = "twod" class = "center preview hvr-grow" style = "display: inline-block">
-             <div class = "vcenter font-main" style = "text-align: center">2D Art</div>
+           <div id = "twod" class = "center preview hvr-grow hvr-sweep-to-top" style = "display: inline-block">
+             <div class = "vcenter font-main gallery-title" style = "text-align: center">2D Art</div>
            </div>
-           <div id = "threed" class = "center preview hvr-grow" style = "display: inline-block">
-             <div class = "vcenter font-main" ><p>3D Art</p></div>
+           <div id = "threed" class = "center preview hvr-grow hvr-sweep-to-top" style = "display: inline-block">
+             <div class = "vcenter font-main gallery-title" ><p>3D Art</p></div>
            </div>
-           <div id = "work" class = "center preview hvr-grow" style = "display: inline-block">
-             <div class = "vcenter font-main" style = "text-align: center;">Work in Progress</div>
+           <div id = "work" class = "center preview hvr-grow hvr-sweep-to-top" style = "display: inline-block">
+             <div class = "vcenter font-main gallery-title" style = "text-align: center;">Work in Progress</div>
            </div>
          </div>
-       </section>
+       </section> -->
+       <section id = "gallery" class = "container-fluid">
+           <h1>portfolio and gallery</h1>
+           <div class = "divider wow slideInLeft"></div>
+             <div id = "twod" class = "center preview" style = "display: inline-block">
+               <img src = "img/menu/preview/fruit-thumb.jpg">
+               <div class = "mask">
+                 <h2>2D Art</h2>
+                 <p>Description</p>
+                  <a class = "info">View</a>
+               </div>
+             </div>
+             <div id = "threed" class = "center preview" style = "display: inline-block">
+               <img src = "img/menu/preview/bowl-thumb.jpg">
+               <div class = "mask">
+                 <h2>3D Art</h2>
+                 <p>Description</p>
+                 <a class = "info">View</a>
+               </div>
+             </div>
+             <div id = "work" class = "center preview" style = "display: inline-block">
+               <img src = "img/menu/preview/2d-thumb.jpg">
+               <div class = "mask">
+                 <h2>Work in Progress</h2>
+                 <p>Description</p>
+                 <a class = "info">View</a>
+               </div>
+             </div>
+           </div>
+         </section>
 
        <section id = "recognition" class = "container-fluid">
          <h1>recognition</h1>
