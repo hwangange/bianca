@@ -43,6 +43,83 @@ h1 {
   margin-bottom: 30px;
 }
 
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color:white;
+  align-content: center;
+  /*background: url('../img/loader.jpg') 50% 50% no-repeat rgb(249,249,249);*/
+}
+
+.loader span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin: 50px auto;
+  background: #174C4F;
+  border-radius: 5px;
+  -webkit-animation: loading 0.9s infinite alternate;
+  -moz-animation: loading 0.9s infinite alternate;
+  box-shadow:1px 1px 1px #444444;
+}
+
+.loader span:nth-of-type(2) {
+  background: #207178;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+}
+
+.loadingdiv span:nth-of-type(3) {
+    background: #FF9666;
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+}
+
+.loadingdiv span:nth-of-type(4) {
+    background: #FFE184;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+}
+
+.loadingdiv span:nth-of-type(5) {
+    background: #F5E9BE;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    width: 10px;
+    height: 10px;
+    -webkit-transform: translateZ(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    -webkit-transform: translateZ(-21px);
+  }
+}
+
+@-moz-keyframes loading {
+  0% {
+    width: 10px;
+    height: 10px;
+    -moz-transform: translateZ(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    -moz-transform: translateZ(-21px);
+  }
+}
+
 .hidden {
   opacity: 0;
 }
@@ -102,7 +179,7 @@ h1, #bio-name, .navbar-brand {
 
 
 #mainNav li.active a, #mainNav li.active a:hover, #mainNav li a:hover, #mainNav li a:focus {
-  background: #B2CCE5;
+  background: none;
 }
 
 #socialNav li.active a, #socialNav li.active a:hover, #socialNav li a:hover, #socialNav li a:focus {
@@ -135,9 +212,13 @@ h1, #bio-name, .navbar-brand {
   /*default ipad */
 /*} */
 
-@media only screen and (max-device-width: 480px) or (max-width: 480px) {
+@media only screen and (min-width : 319px) and (max-width : 480px){
   #about, #gallery, #recognition, #contact {
     padding: 50px 25px 50px 25px;
+  }
+
+  #socialNav li {
+    display: none;
   }
 
   #profile {
@@ -155,19 +236,18 @@ h1, #bio-name, .navbar-brand {
   }
 
   #home {
-    background-image: none;
-    padding: 0;
-    margin: none;
+    background: none;
   }
-
   #bio {
+    display: none;
     position: absolute;
     z-index: 1;
     display: block;
     width: 100%;
-    left: 0;
-    top: 0;
+    left: 0vw;
+    top: 0vh;
     float: none;
+    margin: 0;
     border-radius: 0px;
   }
 }
@@ -247,8 +327,13 @@ h1, #bio-name, .navbar-brand {
   -webkit-align-items: center; /* Safari 7.0+ */
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
+#menu div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 #twod, #threed, #work {
   opacity: 0;
   background-size: cover;

@@ -43,6 +43,10 @@
 
       new WOW().init();
 
+      $(window).load(function() {
+      	$(".loader").fadeOut(100);
+      });
+
       $(document).ready(function(){
         $('.navbar').show("slow");
 
@@ -163,7 +167,13 @@
             </div>
           </div>
         </nav>
-
+        <div class = 'loader'>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
        <section id = "home" class = "container-fluid" data-0 = "opacity:1" data-1000 = "opacity:0">
          <!--<div id = "bgImage"><img src = "img/home.JPG"></div> -->
          <div id = "bio" class = "wow bounceIn" style = "float: right">
