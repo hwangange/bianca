@@ -118,6 +118,43 @@
             }
         });
 
+      	function sameHeights(selector) {
+      	    var selector = selector || '[data-key="sameHeights"]',
+      	        query = document.querySelectorAll(selector),
+      	        elements = query.length,
+      	        max = 0;
+      	    if (elements) {
+      	        while (elements--) {
+      	            var element = query[elements];
+      	            if (element.clientHeight > max) {
+      	                max = element.clientHeight;
+      	            }
+      	        }
+      	        elements = query.length;
+      	        while (elements--) {
+      	            var element = query[elements];
+      	            element.style.height = max + 'px';
+      	        }
+      	    }
+      	}
+
+        if ('addEventListener' in window) {
+      	    window.addEventListener('resize', function(){
+      	        sameHeights('[data-key="sameHeights"]');
+      	    });
+      	    window.addEventListener('load', function(){
+      	        sameHeights('[data-key="sameHeights"]');
+      	    });
+
+            window.addEventListener('resize', function(){
+      	        sameHeights('[data-key="otherSameHeights"]');
+      	    });
+      	    window.addEventListener('load', function(){
+      	        sameHeights('[data-key="otherSameHeights"]');
+      	    });
+      	}
+
+
       /*  $('li a').focusin(function() {
           $(this).css("background","#B2CCE5");
         });
@@ -186,11 +223,27 @@
        <section id = "about" class = "container-fluid">
          <h1>about</h1>
          <div class = "divider wow slideInLeft"></div>
-         <img id = "profile" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300">
-          <p>Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
-          <p>Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
-          <p>Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
-          <p>Now a high school student, Chu still pursues her passion for sculpting and other forms of three dimensional art, including clay and mixed media. "Art isn't just a hobby," Chu says. "It's a craft that has shaped me into the person I am today." </p>
+         <div class = "row">
+           <div class = "col-md-6 col-xs-6 otherSameHeights">
+             <img id = "profile" data-key = "otherSameHeights" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "100%">
+           </div>
+           <div class = "col-md-6 col-xs-6" data-key = "otherSameHeights">
+              <p>Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
+              <br>
+              <p>Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
+            </div>
+          </div>
+          <div class = "row">
+            <div class = "col-md-6 col-xs-6">
+              <p>Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
+              <p>Now a high school student, Chu still pursues her passion for sculpting and other forms of three dimensional art, including clay and mixed media. "Art isn't just a hobby," Chu says. "It's a craft that has shaped me into the person I am today." </p>
+            </div>
+            <div class = "col-md-6 col-xs-6">
+              <img id = "profile2" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline; z-index: 1" width = "75%">
+              <img id = "profile3" class = "img-responsive wow bouncein" src = "img/profile.jpg" style = "z-index: 99" width = "10%">
+            </div>
+          </div>
+          </section>
 
        </section>
 
@@ -212,28 +265,31 @@
        <section id = "gallery" class = "container-fluid">
            <h1>portfolio and gallery</h1>
            <div class = "divider wow slideInLeft"></div>
-             <div id = "twod" class = "center preview" style = "display: inline-block">
-               <img src = "img/menu/preview/twod-thumb.jpg">
-               <div class = "mask">
-                 <h2>2D Art</h2>
-                 <p>pencil, water color</p>
-                  <a class = "info">View</a>
+           <div class = "equal sameHeights">
+             <div class = "menu row">
+               <div id = "twod" data-key = "sameHeights" class = "center preview" style = "display: inline-block">
+                 <img src = "img/menu/preview/twod-thumb.jpg">
+                 <div class = "mask">
+                   <h2>2D Art</h2>
+                   <p>pencil, water color</p>
+                    <a class = "info">View</a>
+                 </div>
                </div>
-             </div>
-             <div id = "threed" class = "center preview" style = "display: inline-block">
-               <img src = "img/menu/preview/bowl-thumb.jpg">
-               <div class = "mask">
-                 <h2>3D Art</h2>
-                 <p>sculpting, clay</p>
-                 <a class = "info">View</a>
+               <div id = "threed" data-key = "sameHeights" class = "center preview" style = "display: inline-block">
+                 <img src = "img/menu/preview/bowl-thumb.jpg">
+                 <div class = "mask">
+                   <h2>3D Art</h2>
+                   <p>sculpting, clay</p>
+                   <a class = "info">View</a>
+                 </div>
                </div>
-             </div>
-             <div id = "work" class = "center preview" style = "display: inline-block">
-               <img src = "img/menu/preview/2d-thumb.jpg">
-               <div class = "mask">
-                 <h2>Works</h2>
-                 <p>in progress</p>
-                 <a class = "info">View</a>
+               <div id = "work" data-key = "sameHeights" class = "center preview" style = "display: inline-block">
+                 <img src = "img/menu/preview/2d-thumb.jpg">
+                 <div class = "mask">
+                   <h2>Works</h2>
+                   <p>in progress</p>
+                   <a class = "info">View</a>
+                 </div>
                </div>
              </div>
            </div>
