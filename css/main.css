@@ -22,6 +22,10 @@ h1 {
   margin-bottom: 30px;
 }
 
+#carrotdown {
+  opacity: 0;
+}
+
 #about h1, #gallery h1, #recognition h1, #contact h1 {
   text-align: left;
   margin-bottom: 10px;
@@ -196,72 +200,6 @@ h1, #bio-name, .navbar-brand {
   min-width: 100%;
 }
 
-/*@media only screen and (min-width:960px) {
-
-}
-
-@media only screen and (min-width:1440px) {
-
-}
-
-@media only screen and (min-width:2000px) {
-
-}
-
-@media only screen and (device-width:768px) {
-  /*default ipad */
-/*} */
-
-@media screen and (max-width : 480px) {
-  #home {
-    display: none;
-  }
-
-  #about, #gallery, #recognition, #contact {
-    padding: 1.5em;
-  }
-}
-/*@media screen and (max-width : 480px){
-  #about, #gallery, #recognition, #contact {
-    padding: 50px 25px 50px 25px;
-    height: auto;
-  }
-
-  #socialNav li {
-    display: none;
-  }
-
-  #profile {
-    display: block;
-    float: none;
-  }
-
-  #menu {
-    align-items: center;
-  }
-
-  div.preview {
-    display: block;
-    margin: auto;
-  }
-
-  #home {
-    background: none;
-  }
-  #bio {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    left: 0vw;
-    top: 0vh;
-    float: none;
-    margin: 0;
-    border-radius: 0px;
-  }
-} */
-
 #about, #gallery, #recognition {
   color: white;
 }
@@ -282,6 +220,10 @@ h1, #bio-name, .navbar-brand {
 
 #about img {
   border-radius: 5px;
+}
+
+.glyphicon {
+  background-color: white;
 }
 
 /**** HOME PAGE ***/
@@ -334,6 +276,15 @@ h1, #bio-name, .navbar-brand {
 }
 /**** ABOUT ****/
 
+#profile2 {
+  z-index:1;
+  display: inline;
+}
+
+#profile3 {
+  z-index: 99;
+  position: absolute;
+}
 /*** GALLERY ***/
 
 #menu {
@@ -692,3 +643,118 @@ a {
     text-decoration: none;
     color: #fff;
   }
+
+
+  @media screen and (max-width : 480px) {
+    #home {
+      display: block;
+      background: none;
+      height: 100%;
+      display: block;
+      z-index: 1;
+      vertical-align: middle;
+    }
+
+    #carrotdown {
+      opacity: 1;
+      margin: auto;
+    }
+
+    #bio {
+      display: block;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      margin-top: 50px;
+      border-radius: 0px;
+    }
+
+    #about {
+      display: block;
+      min-height: 100%;
+    }
+
+    #profile1, #profile2, #profile3 {
+      display: block;
+      position: relative;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      margin-bottom: 5%;
+    }
+
+    #about, #gallery, #recognition, #contact {
+      padding: 1.5em;
+    }
+
+    #gallery {
+      margin-bottom: none;
+    }
+
+    .preview {
+      display: block;
+      margin: 5% 10% 5% 10%;
+      width: 80%;
+      height: same-as-width;
+    }
+  }
+
+  @media screen and (max-width:960px) {
+
+  }
+
+/*
+  @media only screen and (min-width:1440px) {
+
+  }
+
+  @media only screen and (min-width:2000px) {
+
+  }
+
+  @media only screen and (device-width:768px) {
+    /*default ipad */
+  /*} */
+
+  /*@media screen and (max-width : 480px){
+    #about, #gallery, #recognition, #contact {
+      padding: 50px 25px 50px 25px;
+      height: auto;
+    }
+
+    #socialNav li {
+      display: none;
+    }
+
+    #profile {
+      display: block;
+      float: none;
+    }
+
+    #menu {
+      align-items: center;
+    }
+
+    div.preview {
+      display: block;
+      margin: auto;
+    }
+
+    #home {
+      background: none;
+    }
+    #bio {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      left: 0vw;
+      top: 0vh;
+      float: none;
+      margin: 0;
+      border-radius: 0px;
+    }
+  } */
