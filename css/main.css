@@ -30,12 +30,12 @@ h1 {
 
 .divider {
   border: 0;
-  height: 5px;
-  background: #333;
-  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  height: 3px;
+  background: #c8c3be;
+/*  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
   background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
   background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
-  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);*/
   margin-bottom: 50px;
 }
 
@@ -191,7 +191,7 @@ h1, #bio-name, .navbar-brand {
 }
 
 #about, #gallery, #recognition, #contact {
-  padding: 50px 100px 50px 100px; /*50px*/
+  padding: 50px 2in 50px 2in; /*50px*/
   min-height: 100%;
   min-width: 100%;
 }
@@ -212,7 +212,16 @@ h1, #bio-name, .navbar-brand {
   /*default ipad */
 /*} */
 
-@media only screen and (min-width : 319px) and (max-width : 480px){
+@media screen and (max-width : 480px) {
+  #home {
+    display: none;
+  }
+
+  #about, #gallery, #recognition, #contact {
+    padding: 1.5em;
+  }
+}
+/*@media screen and (max-width : 480px){
   #about, #gallery, #recognition, #contact {
     padding: 50px 25px 50px 25px;
     height: auto;
@@ -251,7 +260,7 @@ h1, #bio-name, .navbar-brand {
     margin: 0;
     border-radius: 0px;
   }
-}
+} */
 
 #about, #gallery, #recognition {
   color: white;
@@ -328,7 +337,10 @@ h1, #bio-name, .navbar-brand {
   -webkit-align-items: center; /* Safari 7.0+ */
   display: flex;
   align-items: center;
+  align: center;
   flex-wrap: wrap;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 #menu div {
@@ -341,7 +353,7 @@ h1, #bio-name, .navbar-brand {
 }
 
 .center {
-  min-height: 12em;
+/*  min-height: 12em;*/
   display: table-cell;
   vertical-align: middle;
 }
@@ -364,14 +376,19 @@ h1, #bio-name, .navbar-brand {
   overflow: hidden;
   box-shadow: 1px 1px 2px #e6e6e6; */
 
+  align-items: center;
+  -webkit-align-items: center;
+
   display: -webkit-flex;
-  margin: 10px;
+  margin: 2.5%;
+  width: 26.666666666667%;
+  height: same-as-width;
   float: left;
-  border: 10px solid #fff;
+  border: 2px solid #fff;
   overflow: hidden;
   position: relative;
   text-align: center;
-  box-shadow: 1px 1px 2px #e6e6e6;
+/*  box-shadow: 1px 1px 2px #e6e6e6;*/
 }
 
 .preview img {
@@ -380,8 +397,8 @@ h1, #bio-name, .navbar-brand {
 }
 
 .preview .mask{
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -426,8 +443,8 @@ h1, #bio-name, .navbar-brand {
 
 .preview img {
   transition: all 0.2s linear;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
 }
 
 .preview .mask {
@@ -437,14 +454,14 @@ h1, #bio-name, .navbar-brand {
 }
 
 .preview h2 {
-    transform: translateY(-100px);
+    transform: translateY(-80%);
     opacity: 0;
     font-family: Raleway, serif;
     transition: all 0.2s ease-in-out;
     font-size: 300%;
 }
 .preview p {
-    transform: translateY(100px);
+    transform: translateY(40%);
     opacity: 0;
     transition: all 0.2s linear;
 }
