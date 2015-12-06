@@ -44,12 +44,14 @@
 
       new WOW().init();
 
+
     /*  $(window).load(function() {
       	$(".loader").fadeOut(100);
       }); */
 
       $(document).ready(function(){
         $('.navbar').show("slow");
+        adjustAbout();
 
     /*  $('#bio').show(1000);*/
 
@@ -113,7 +115,7 @@
             if( target.length ) {
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top
+                    scrollTop: target.offset().top - 50;
                 }, 1000);
             }
         });
@@ -154,6 +156,10 @@
       	    });
       	}
 
+        function adjustAbout() {
+          var profileHeight = $('#about').scrollTop() + $('#about').outerHeight() + $('#profile3').outerHeight();
+          document.getElementById('about').style.height = profileHeight;
+        }
 
       /*  $('li a').focusin(function() {
           $(this).css("background","#B2CCE5");
@@ -221,15 +227,17 @@
 
        </section>
 
-       <section id = "about" class = "container-fluid">
-         <span class = "glyphicon glyphicon-list"></span>
-         <h1>about</h1>
+    <!--   <section id = "about" class = "container-fluid">
+         <div class = "topSection">
+           <i class = "fa fa-list fa-2x wow bounceIn" data-wow-offset = "300"></i>
+           <h1>about</h1>
+         </div>
          <div class = "divider wow slideInLeft"></div>
          <div class = "row">
-           <div class = "col-md-6">
-             <img id = "profile" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "100%">
+           <div class = "col-md-6 equal sameHeights">
+             <img id = "profile" class = "img-responsive wow bounceIn sameHeights" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline">
            </div>
-           <div class = "col-md-6">
+           <div class = "col-md-6 sameHeights">
               <p>Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
               <br>
               <p>Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
@@ -247,7 +255,30 @@
           </div>
           </section>
 
-       </section>
+       </section> -->
+       <section id = "about" class = "container-fluid">
+            <div class = "topSection">
+              <i class = "fa fa-list fa-2x wow bounceIn" data-wow-offset = "300"></i>
+              <h1>about</h1>
+            </div>
+            <div class = "divider wow slideInLeft"></div>
+            <div class = "row">
+              <div class = "col-md-6 equal sameHeights">
+                <img id = "profile" class = "img-responsive wow bounceIn sameHeights" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline">
+                <p>Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
+                <p>Now a high school student, Chu still pursues her passion for sculpting and other forms of three dimensional art, including clay and mixed media. "Art isn't just a hobby," Chu says. "It's a craft that has shaped me into the person I am today." </p>
+              </div>
+              <div class = "col-md-6 sameHeights container-fluid">
+                <p>Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
+                <br>
+                <p>Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
+                <img id = "profile2" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "75%">
+                <img id = "profile3" class = "img-responsive wow bouncein" src = "img/galaxy.jpg" style = "display: inline" width = "60%">
+               </div>
+             </div>
+             </section>
+
+          </section>
 
     <!--   <section id = "gallery" class = "container-fluid">
          <h1>portfolio and gallery</h1>
@@ -265,8 +296,10 @@
          </div>
        </section> -->
        <section id = "gallery" class = "container-fluid">
-          <span class = "glyphicon glyphicon-pencil"></span>
-           <h1>portfolio and gallery</h1>
+         <div class = "topSection">
+            <i class = "fa fa-paint-brush fa-2x wow bounceIn" data-wow-offset = "300"></i>
+             <h1>portfolio and gallery</h1>
+        </div>
            <div class = "divider wow slideInLeft"></div>
            <div class = "equal sameHeights">
              <div class = "menu row">
@@ -299,8 +332,10 @@
          </section>
 
        <section id = "recognition" class = "container-fluid">
-         <span class = "glyphicon glyphicon-gift"></span>
-         <h1>recognition</h1>
+         <div class = "topSection">
+           <i class = "fa fa-trophy fa-2x wow bounceIn" data-wow-offset = "300"></i>
+           <h1>recognition</h1>
+         </div>
          <div class = "divider wow slideInLeft"></div>
          <h2>2015</h2>
          <p>Retrospective: Best Ceramics Student Award</p>
@@ -317,21 +352,44 @@
 
        <section id = "contact" class = "container-fluid">
          <div class = 'content'>
-           <span class = "glyphicon glyphicon-phone"></span>
-           <h1>contact</h1>
+           <div class = "topSection">
+             <i class = "fa fa-phone fa-2x wow bounceIn" data-wow-offset = "300"></i>
+             <h1>contact</h1>
+           </div>
            <div class = "divider wow slideInLeft"></div>
-           <div style = "text-align: center">
-             <h2 class = "wow fadeIn">Please contact me if you have any questions or concerns!</h2>
-             <a href = "mailto:bianca.chu@gmail.com"><button class="button  email child">bianca.chu@gmail.com</button></a><br/><br/>
+           <div id = "social-menu" style = "text-align: center">
+          <!--   <h2 class = "wow fadeIn">Let's keep in touch!</h2> -->
+            <!-- <a href = "mailto:bianca.chu@gmail.com"><button class="button  email child">bianca.chu@gmail.com</button></a><br/><br/>
              <a href = "tel:123456789"><button class="button  phone child">tel: 123 456 7890</button></a>
 
              <div class="buttons animated">
-          <!--    <a href="tel:1111111111" class="phone"><i class="fa fa-mobile-phone"></i></a> -->
+              <a href="tel:1111111111" class="phone"><i class="fa fa-mobile-phone"></i></a>
               <a href="https://www.facebook.com/bianca.chu.5" class="facebook child" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="https://plus.google.com/110791524480999662643" class="google-plus child" target="_blank"><i class="fa fa-google-plus"></i></a>
-            <!--  <a href="mailto:bianca.chu@gmail.com" class="email"><i class="fa fa-envelope"></i></a>-->
+              <a href="mailto:bianca.chu@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
               <a href = "https://www.instagram.com" class = "instagram child"><i class = "fa fa-instagram"></i></a>
-              </div>
+            </div> -->
+
+            <div class = "email social">
+              <a href = "mailto:bianca.chu@gmail.com"><i class = "hovicon effect-5 sub-a fa fa-envelope"></i></a>
+              <h4>bianca.chu@gmail.com</h4>
+            </div>
+            <div class = "tele social">
+              <a href = "tel:123456789"><i class = "hovicon effect-5 sub-a fa fa-phone"></i></a>
+              <h4>123456789</h4>
+            </div>
+            <div class = "facebook social">
+              <a href = "https://www.facebook.com/bianca.chu.5"><i class = "hovicon effect-5 sub-a fa fa-facebook"></i></a>
+              <h4>Facebook</h4>
+            </div>
+            <div class = "google social">
+              <a href = "https://plus.google.com/110791524480999662643"><i class = "hovicon effect-5 sub-a fa fa-google-plus"></i></a>
+              <h4>Google+</h4>
+            </div>
+            <div class = "insta social">
+              <a href = "https://www.instagram.com"><i class = "hovicon effect-5 sub-a fa fa-instagram"></i></a>
+              <h4>Instagram</h4>
+            </div>
             </div>
           </div>
     </section>

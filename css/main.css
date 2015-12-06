@@ -20,6 +20,11 @@ html, body {
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  display: inline;
+}
+
+.topSection {
+  margin-bottom: 20px;
 }
 
 #carrotdown {
@@ -30,6 +35,7 @@ h1 {
   text-align: left;
   margin-bottom: 10px;
   opacity: 0;
+  margin-left: 20px;
 }
 
 .divider {
@@ -219,11 +225,14 @@ h1, #bio-name, .navbar-brand {
 }
 
 #about img {
-  border-radius: 5px;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+	-moz-border-radius: 999px;
 }
 
-.glyphicon {
-  background-color: white;
+section.glyphicon {
+  display: inline;
+  font-size: 50px;
 }
 
 /**** HOME PAGE ***/
@@ -276,7 +285,7 @@ h1, #bio-name, .navbar-brand {
 }
 /**** ABOUT ****/
 
-#profile2 {
+/*#profile2 {
   z-index:1;
   display: inline;
 }
@@ -284,7 +293,7 @@ h1, #bio-name, .navbar-brand {
 #profile3 {
   z-index: 99;
   position: absolute;
-}
+} */
 /*** GALLERY ***/
 
 #menu {
@@ -598,18 +607,24 @@ a:hover {
   float:left;
   margin: 0 50px 30px 0;
   opacity: 1;
+  border-radius: 100%;
 }
 
 #profile2 {
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
+  z-index: 0;
+
 }
 
 #profile3 {
   position: absolute;
-  left: 30%;
-  top: 100%;
+  z-index: 1;
+  left: 50%;
+  top: 70%;
+  max-height: 300px;
+  margin-bottom: 50px;
 }
 
 #about p {
@@ -624,6 +639,10 @@ a:hover {
 .child {
   display: table-cell;
   vertical-align: middle;
+}
+
+#about div:nth-last-child(1) {
+  margin-bottom: 50px;
 }
 
 
@@ -681,7 +700,6 @@ a {
       z-index: 1;
       left: 0;
       top: 0;
-      width: 100%;
       margin-bottom: 5%;
     }
 
@@ -701,11 +719,15 @@ a {
     }
   }
 
-  @media screen and (max-width:960px) {
+  @media screen and (max-width : 960px) {
 
   }
 
-/*
+/*  @media screen and (max-width:960px) {
+
+  }
+
+
   @media only screen and (min-width:1440px) {
 
   }
