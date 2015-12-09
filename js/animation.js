@@ -29,6 +29,8 @@ $(window).scroll(function() {
 
     var recognition = function() {
       $('#recognition').find('h1').delay(500).animate({opacity:1}, 'slow');
+      $('#recognition').find('h2').delay(1000).animate({opacity:1}, 'slow');
+      $('#recognition').find('p').delay(1500).animate({opacity:1}, 'slow');
     };
 
     var recognitioncontent = function() {

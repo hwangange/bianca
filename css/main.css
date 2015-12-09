@@ -166,7 +166,7 @@ h1, #bio-name, .navbar-brand {
   font-weight: 700;
 }
 
-#recognition p, #about p {
+#recognition h4, #recognition p, #about p {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -214,6 +214,10 @@ h1, #bio-name, .navbar-brand {
 
 #about, #gallery, #recognition {
   color: white;
+}
+
+#recognition p {
+
 }
 
 #about, #gallery, #recognition {
@@ -275,11 +279,11 @@ section.glyphicon {
   position: absolute;
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 3%;
   text-align: center;
   align-items: center;
   top: 30vh;
-  left: 75vw;
+  left: 73vw;
   margin-right: 5%;
   border-radius: 25px;
   z-index: 2;
@@ -624,6 +628,10 @@ section.glyphicon {
 
 #recognition h1, #recognition h2, #recognition p {
   opacity: 0;
+}
+
+#recognition p {
+  font-size: 80%;
 }
 
 /*** CONTACT ***/
