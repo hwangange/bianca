@@ -275,7 +275,7 @@ $(document).ready(function() {
   $('#work-one').click(function() {
     $(this).lightGallery({
       dynamic: true,
-      dynamicE1: [{
+      dynamicEl: [{
         'src': 'lightGallery-master/demo/img/1.jpg',
         'thumb': 'lightGallery-master/demo/img/1.jpg'
       }]
@@ -285,7 +285,7 @@ $(document).ready(function() {
   $('#work-two').click(function() {
     $(this).lightGallery({
       dynamic: true,
-      dynamicE1: [{
+      dynamicEl: [{
         'src': 'lightGallery-master/demo/img/2.jpg',
         'thumb': 'lightGallery-master/demo/img/2.jpg'
       }]
