@@ -326,6 +326,10 @@ section.glyphicon {
   background-size: cover;
 }
 
+#gallery h2 {
+  font-family: infinityregular;
+  padding-top: 5%;
+}
 .center {
 /*  min-height: 12em;*/
   display: table-cell;
@@ -570,7 +574,7 @@ section.glyphicon {
 }
 
 .display {
-  display: none;
+  display: block;
 }
 
 .gallery-item {
@@ -578,9 +582,7 @@ section.glyphicon {
   align-items: center;
   -webkit-align-items: center;
   margin: 0;
-  width: 25%;
-  max-width: 300px;
-  max-height: 200px;
+  width: 33.33333%;
   float: left;
   border: 1px solid #fff;
   overflow: hidden;
@@ -590,9 +592,11 @@ section.glyphicon {
 }
 
 .gallery-item img {
-  display: flex;
   position: relative;
   zoom: 20%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
   -webkit-transition: .4s ease-in-out;
   -moz-transition: .4s ease-in-out;
   -o-transition: .4s ease-in-out;
@@ -742,6 +746,19 @@ a:hover {
 }
 
 
+#about p:nth-last-child(1) {
+  margin-top: 0px;
+}
+
+#about #trouble-p {
+  margin-top: 40%;
+}
+
+#about #profile {
+  display: block; 
+  margin: 0 auto;
+}
+
 /**LINKS**/
 a {
   text-decoration: none;
@@ -816,7 +833,9 @@ a {
   }
 
   @media screen and (max-width : 960px) {
-
+    .gallery-item {
+      width: 100%;
+    }
   }
 
 /*  @media screen and (max-width:960px) {
@@ -830,9 +849,15 @@ a {
       padding: 75px 25em 100px 25em;
     }
 
-    #about p:nth-last-child(1) {
-      margin-top: 30%;
+    #about #trouble-p {
+      margin-top: 35%;
     }
+
+    #about #profile {
+      margin-top: 5%;
+    }
+
+
 
   }
 

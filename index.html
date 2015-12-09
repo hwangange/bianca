@@ -54,6 +54,8 @@
         $('.navbar').show("slow");
         adjustAbout();
 
+        $('.gallery-item').height($('.gallery-item').width());
+
     /*  $('#bio').show(1000);*/
 
       /*$('body').scrollspy({target: ".navbar", offset: 50}); */
@@ -271,18 +273,21 @@
               <h1>about</h1>
             </div>
             <div class = "divider wow slideInLeft"></div>
+            <blockquote>
+            	<p>The world is but a canvas to our imagination.</p>
+            	<footer>Henry David Thoreau</footer>
+            </blockquote>
             <div class = "row">
-              <div class = "col-md-6 sameHeights container-fluid">
+              <div class = "col-md-6 container-fluid">
                 <p style = "margin-top: 7%">Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
-                <br>
                 <p style = "margin-bottom: 5%">Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
-                <div class = "container-fluid" style = "align-items: center"><img id = "profile" class = "img-responsive wow bounceIn sameHeights profile" src = "img/profile.jpg" data-wow-offset = "300" style = "display: block; margin: 0 auto"></div>
+                <div class = "container-fluid" style = "align-items: center"><img id = "profile" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" data-wow-offset = "300"></div>
                </div>
-              <div class = "col-md-6 equal sameHeights">
+              <div class = "col-md-6 equal">
                 <img id = "profile2" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "90%">
                 <img id = "profile3" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "50%">
                 <img id = "profile4" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "31%">
-                <p style = "margin-top: 40%">Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
+                <p id = "trouble-p">Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
                 <p>Now a high school student, Chu still pursues her passion for sculpting and other forms of three dimensional art, including clay and mixed media. "Art isn't just a hobby," Chu says. "It's a craft that has shaped me into the person I am today." </p>
               </div>
              </div>
@@ -310,7 +315,7 @@
             <i class = "fa fa-paint-brush fa-2x wow bounceIn" data-wow-offset = "300"></i>
              <h1>portfolio and gallery</h1>
         </div>
-           <div class = "divider wow slideInLeft"></div>
+         <!--  <div class = "divider wow slideInLeft"></div>
            <div class = "equal sameHeights">
              <div class = "menu row">
                <div id = "twod" data-key = "sameHeights" class = "center preview">
@@ -338,9 +343,10 @@
                  </div>
                </div>
              </div>
-           </div>
+           </div> -->
 
            <div class = "display" id = "twod-display">
+           	 <h2>2D Art</h2>
              <div class = "gallery-item" id = "bird">
                <img src = "img/menu/2d/bird.jpg">
              </div>
@@ -355,7 +361,9 @@
              </div>
            </div>
 
+           
            <div class = "display" id = "threed-display">
+           	<h2 style = "clear: both">3D Art</h2>
              <div class = "gallery-item" id = "bowl">
                <img src = "img/menu/3d/bowl1.jpg">
              </div>
@@ -382,11 +390,13 @@
              </div>
            </div>
 
-           <div class = "display" id = "works-display">
-             <div class = "work-one">
+           
+           <div class = "display" id = "work-display">
+           <h2 style = "clear: both">Work in Progress</h2>
+             <div class = "gallery-item" id = "work-one">
                <img src = "lightGallery-master/demo/img/1.jpg">
              </div>
-             <div class = "work-two">
+             <div class = "gallery-item" id = "work-two">
                <img src = "lightGallery-master/demo/img/2.jpg">
              </div>
            </div>
