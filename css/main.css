@@ -38,6 +38,12 @@ h1 {
   margin-left: 20px;
 }
 
+.bio-divider {
+  height: 1px;
+  background: #fff;
+  border: 0;
+}
+
 .divider {
   border: 0;
   height: 3px;
@@ -201,7 +207,7 @@ h1, #bio-name, .navbar-brand {
 }
 
 #about, #gallery, #recognition, #contact {
-  padding: 50px 2in 50px 2in; /*50px*/
+  padding: 75px 2in 100px 2in; /*50px*/
   min-height: 100%;
   min-width: 100%;
 }
@@ -431,7 +437,10 @@ section.glyphicon {
 }
 .preview a.info{
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    background-color: black;
+    color: white;
+    transition: opacity 0.2s ease-in-out;
+    transition: background-color, color 0.2s ease-in-out;
 }
 
 /* */
@@ -453,6 +462,12 @@ section.glyphicon {
 }
 .preview:hover a.info {
     transition-delay: 0.2s;
+}
+
+.preview a.info:hover {
+  background-color: white;
+  color: black;
+  transition-delay: 0.1s;
 }
 
 /*.equal {
@@ -550,6 +565,56 @@ section.glyphicon {
   opacity: .5;
 }
 
+.display {
+  display: none;
+}
+
+.gallery-item {
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  margin: 0;
+  width: 25%;
+  max-width: 300px;
+  max-height: 200px;
+  float: left;
+  border: 1px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-color: white;
+}
+
+.gallery-item img {
+  display: flex;
+  position: relative;
+  zoom: 20%;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+/*.gallery-item {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.gallery-item:hover {
+  opacity: .5;
+} */
+.gallery-item:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transition: scale(1.1);
+}
+
+
+
 /*#twod, #work {
   background-repeat: no-repeat;
   background-size: 300px auto;
@@ -597,9 +662,20 @@ a:hover {
 }
 
 
+/*.mask h2, .mask p, .mask a {
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+} */
+
+
 /** ABOUT PAGE ***/
 #about {
   word-wrap: break-word;
+}
+
+.profile {
+  align-self: center;
 }
 
 #profile {
@@ -608,6 +684,8 @@ a:hover {
   margin: 0 50px 30px 0;
   opacity: 1;
   border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #profile2 {
@@ -621,23 +699,24 @@ a:hover {
 #profile3 {
   position: absolute;
   z-index: 1;
-  left: 10%;
-  top: 43%;
-  max-height: 300px;
-  margin-bottom: 50px;
+  left: 12%;
+  top: 34%;
+/*  max-height: 300px; */
+
 }
 
 #profile4 {
   position: absolute;
   z-index: 1;
   left: 70%;
-  top: 50%;
-  max-height: 150px;
-  margin-bottom: 50px;
+  top: 32%;
+/*  max-height: 150px; */
+
 }
 
 #about p {
   opacity: 0;
+  line-height: 230%;
 }
 
 #contact {
@@ -735,16 +814,24 @@ a {
 /*  @media screen and (max-width:960px) {
 
   }
-
+*/
 
   @media only screen and (min-width:1440px) {
+    #about, #gallery, #recognition, #contact {
+    /*  padding: 75px 2in 100px 2in; */
+      padding: 75px 25em 100px 25em;
+    }
+
+    #about p:nth-last-child(1) {
+      margin-top: 30%;
+    }
 
   }
 
   @media only screen and (min-width:2000px) {
 
   }
-
+/*
   @media only screen and (device-width:768px) {
     /*default ipad */
   /*} */

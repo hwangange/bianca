@@ -103,6 +103,14 @@
             $(this).css('cursor','default');
         });
 
+        $('.gallery-item').hover(
+          function() {
+            $(this).css('cursor','pointer');
+          },
+          function() {
+            $(this).css('cursor','default');
+        });
+
       /*  $('.center, .preview').hover(
           function() {
             $(this).css('cursor','pointer');
@@ -219,9 +227,9 @@
          <!--<div id = "bgImage"><img src = "img/home.JPG"></div> -->
          <div id = "bio" class = "wow bounceIn" style = "float: right">
            <h2 style = "font-family: infinityregular">artwork by</h2>
-           <img id = "swirly" src = "img/divider.png" class = "img-responsive" style = "display: block">
+           <img id = "swirly" src = "img/divider.png" class = "img-responsive" style = "display: block; margin-bottom: 10px">
            <h1 id = "bio-name" style = "font-size: 50px; margin-bottom: 10px">bianca chu</h1>
-           <img id = "swirly" src = "img/divider.png" class = "img-responsive" style = "display: block; margin-top: 0px; margin-bottom: 10px;">
+           <div class = "bio-divider" style = "display: block; margin-top: 10px; margin-bottom: 15px;"></div>
            <p>clay | mixed media | sculpting | painting | drawing</p>
          </div>
          <a id = "carrotdown" href = "#about"><span class="glyphicon glyphicon-chevron-down" style = "background-color: white"></span></a>
@@ -265,15 +273,15 @@
             <div class = "divider wow slideInLeft"></div>
             <div class = "row">
               <div class = "col-md-6 sameHeights container-fluid">
-                <p>Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
+                <p style = "margin-top: 7%">Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
                 <br>
-                <p>Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
-                <img id = "profile" class = "img-responsive wow bounceIn sameHeights" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline">
+                <p style = "margin-bottom: 5%">Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
+                <div class = "container-fluid" style = "align-items: center"><img id = "profile" class = "img-responsive wow bounceIn sameHeights profile" src = "img/profile.jpg" data-wow-offset = "300" style = "display: block; margin: 0 auto"></div>
                </div>
               <div class = "col-md-6 equal sameHeights">
-                <img id = "profile2" class = "img-responsive wow bounceIn" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "90%">
-                <img id = "profile3" class = "img-responsive wow bounceIn" src = "img/profile.jpg" style = "display: inline" width = "45%">
-                <img id = "profile4" class = "img-responsive wow bounceIn" src = "img/profile.jpg" style = "display: inline" width = "30%">
+                <img id = "profile2" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "90%">
+                <img id = "profile3" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "50%">
+                <img id = "profile4" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "31%">
                 <p style = "margin-top: 40%">Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
                 <p>Now a high school student, Chu still pursues her passion for sculpting and other forms of three dimensional art, including clay and mixed media. "Art isn't just a hobby," Chu says. "It's a craft that has shaped me into the person I am today." </p>
               </div>
@@ -305,7 +313,7 @@
            <div class = "divider wow slideInLeft"></div>
            <div class = "equal sameHeights">
              <div class = "menu row">
-               <div id = "twod" data-key = "sameHeights" class = "center preview" style = "display: inline-block">
+               <div id = "twod" data-key = "sameHeights" class = "center preview">
                  <img src = "img/menu/preview/twod-thumb.jpg">
                  <div class = "mask">
                    <h2>2D Art</h2>
@@ -322,7 +330,7 @@
                  </div>
                </div>
                <div id = "work" data-key = "sameHeights" class = "center preview" style = "display: inline-block">
-                 <img src = "img/menu/preview/2d-thumb.jpg">
+                 <img src = "img/menu/preview/works-thumb.png">
                  <div class = "mask">
                    <h2>Works</h2>
                    <p>in progress</p>
@@ -331,6 +339,58 @@
                </div>
              </div>
            </div>
+
+           <div class = "display" id = "twod-display">
+             <div class = "gallery-item" id = "bird">
+               <img src = "img/menu/2d/bird.jpg">
+             </div>
+             <div class = "gallery-item" id = "butterfly">
+               <img src = "img/menu/2d/butterfly.jpg">
+             </div>
+             <div class = "gallery-item" id = "fruit">
+               <img src = "img/menu/2d/fruit.jpg">
+             </div>
+             <div class = "gallery-item" id = "pop">
+               <img src = "img/menu/2d/pop.jpg">
+             </div>
+           </div>
+
+           <div class = "display" id = "threed-display">
+             <div class = "gallery-item" id = "bowl">
+               <img src = "img/menu/3d/bowl1.jpg">
+             </div>
+             <div class = "gallery-item" id = "enchilada">
+               <img src = "img/menu/3d/enchilada1.jpg">
+             </div>
+             <div class = "gallery-item" id = "fox">
+               <img src = "img/menu/3d/fox1.jpg">
+             </div>
+             <div class = "gallery-item" id = "lotus">
+               <img src = "img/menu/3d/lotus1.jpg">
+             </div>
+             <div class = "gallery-item" id = "native">
+               <img src = "img/menu/3d/native1.jpg">
+             </div>
+             <div class = "gallery-item" id = "plate">
+               <img src = "img/menu/3d/plate1.jpg">
+             </div>
+             <div class = "gallery-item" id = "snake">
+               <img src = "img/menu/3d/snake1.jpg">
+             </div>
+             <div class = "gallery-item" id = "turtle">
+               <img src = "img/menu/3d/turtle1.jpg">
+             </div>
+           </div>
+
+           <div class = "display" id = "works-display">
+             <div class = "work-one">
+               <img src = "lightGallery-master/demo/img/1.jpg">
+             </div>
+             <div class = "work-two">
+               <img src = "lightGallery-master/demo/img/2.jpg">
+             </div>
+           </div>
+
          </section>
 
        <section id = "recognition" class = "container-fluid">
@@ -339,17 +399,29 @@
            <h1>recognition</h1>
          </div>
          <div class = "divider wow slideInLeft"></div>
-         <h2>2015</h2>
-         <p>Retrospective: Best Ceramics Student Award</p>
-         <p>Houston Livestock Show and Rodeo: Award of Excellence
-         <h2>2014</h2>
-         <p>Retrospective: Best Art II Student Award</p>
-         <p>VASE Regional Finalist</p>
-         <h2>2013</h2>
-         <p>Houston Rodeo Art Show: Outstanding Award</p>
-         <h2>2009</h2>
-         <p>Miller Dog Show: Merit Award</p>
-         <p></p>
+         <h2 class = "wow fadeIn">2015</h2>
+         <section class = "wow fadeIn">
+           <h4>CHS Ceramics Best in Show Award</h4>
+            <p>Description</p>
+           <h4>CHS Ceramics Best Experimental Design Award</h4>
+            <p>Description</p>
+           <h4>Houston Livestock Show and Rodeo: Award of Excellence</h4>
+            <p>Description</p>
+         </section>
+         <br><br>
+         <h2 class = "wow fadeIn">2010</h2>
+         <section class = "wow fadeIn">
+           <h4>Dr. Mari Jon Filla Student Art Contest: White Ribbon</h4>
+            <p>Description</p>
+         </section>
+         <br><br>
+         <h2 class = "wow fadeIn">2009</h2>
+         <section class = "wow fadeIn">
+           <h4>Miller Dog Show: Merit Award</h4>
+            <p>Description</p>
+           <h4>Dr. Mari Jon Filla Student Art Contest: Merit Award</h4>
+            <p>Description</p>
+         </section>
        </section>
 
        <section id = "contact" class = "container-fluid">

@@ -32,8 +32,12 @@ $(window).scroll(function() {
     };
 
     var recognitioncontent = function() {
-      $('#recognition').find('h2').delay(1000).animate({opacity:1}, 'slow');
-      $('#recognition').find('p').delay(1500).animate({opacity:1}, 'slow');
+    /*  $('#recognition').find('h2').eq(0).delay(1000).animate({opacity:1}, 'slow');
+      $('#recognition').find('section').eq(0).delay(1500).animate({opacity:1}, 'slow');
+      $('#recognition').find('h2').eq(1).delay(2000).animate({opacity:1}, 'slow');
+      $('#recognition').find('section').eq(1).delay(2500).animate({opacity:1}, 'slow');
+      $('#recognition').find('h2').eq(2).delay(3000).animate({opacity:1}, 'slow');
+      $('#recognition').find('section').eq(2).delay(3500).animate({opacity:1}, 'slow'); */
     };
 
     var contact = function() {
