@@ -1,6 +1,11 @@
+#social-menu {
+  margin: 0;
+  padding: 0;
+}
+
 .social {
   display: inline-block;
-  margin: auto;
+  margin-right: 5%;
 }
 
 #contact h4 {

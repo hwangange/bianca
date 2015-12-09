@@ -55,6 +55,10 @@ h1 {
   margin-bottom: 50px;
 }
 
+#gallery .divider {
+  margin-bottom: 0px;
+}
+
 #recognition > .divider {
   margin-bottom: 30px;
 }
@@ -329,6 +333,10 @@ section.glyphicon {
 #gallery h2 {
   font-family: infinityregular;
   padding-top: 5%;
+}
+
+#gallery #first-header {
+  padding-top: 2%;
 }
 .center {
 /*  min-height: 12em;*/
