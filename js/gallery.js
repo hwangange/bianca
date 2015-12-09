@@ -78,17 +78,17 @@ $(document).ready(function() {
 
   $('#twod').find('a').click(function() {
     $('#twod-display').css('display','block');
-    $('#twod-display').toggle('slow');
+    $('#twod-display').show('slow');
   })
 
   $('#threed').find('a').click(function() {
     $('#threed-display').css('display','block');
-    $('#threed-display').toggle('slow');
+    $('#threed-display').show('slow');
   })
 
   $('#work').find('a').click(function() {
     $('#work-display').css('display','block');
-    $('#work-display').toggle('slow');
+    $('#work-display').show('slow');
   })
 
 
