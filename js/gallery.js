@@ -272,22 +272,31 @@ $(document).ready(function() {
     })
   });
 
-  $('#work-one').click(function() {
+  $('#tea').click(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        'src': 'lightGallery-master/demo/img/1.jpg',
-        'thumb': 'lightGallery-master/demo/img/1.jpg'
+        'src': 'img/menu/work/tea1.jpg',
+        'thumb': 'img/menu/work/tea1.jpg'
+      }, {
+        'src': 'img/menu/work/tea2.jpg',
+        'thumb': 'img/menu/work/tea2.jpg'
       }]
     })
   });
 
-  $('#work-two').click(function() {
+  $('#pumpkin').click(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        'src': 'lightGallery-master/demo/img/2.jpg',
-        'thumb': 'lightGallery-master/demo/img/2.jpg'
+        'src': 'img/menu/work/pumpkin1.jpg',
+        'thumb': 'img/menu/work/pumpkin1.jpg'
+      }, {
+        'src': 'img/menu/work/pumpkin2.jpg',
+        'thumb': 'img/menu/work/pumpkin2.jpg'
+      }, {
+        'src': 'img/menu/work/pumpkin3.jpg',
+        'thumb': 'img/menu/work/pumpkin3.jpg'
       }]
     })
   });

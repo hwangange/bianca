@@ -16,8 +16,10 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 5px 0;
-        background: transparent;
+    /*    padding: 5px 0;
+        background: transparent; */
+        padding: 0;
+        background: black;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
