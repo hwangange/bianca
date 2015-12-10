@@ -289,14 +289,14 @@ $(document).ready(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        'src': 'img/menu/work/pumpkin1.jpg',
-        'thumb': 'img/menu/work/pumpkin1.jpg'
+        'src': 'img/menu/work/pumpkin1.JPG',
+        'thumb': 'img/menu/work/pumpkin1.JPG'
       }, {
-        'src': 'img/menu/work/pumpkin2.jpg',
-        'thumb': 'img/menu/work/pumpkin2.jpg'
+        'src': 'img/menu/work/pumpkin2.JPG',
+        'thumb': 'img/menu/work/pumpkin2.JPG'
       }, {
-        'src': 'img/menu/work/pumpkin3.jpg',
-        'thumb': 'img/menu/work/pumpkin3.jpg'
+        'src': 'img/menu/work/pumpkin3.JPG',
+        'thumb': 'img/menu/work/pumpkin3.JPG'
       }]
     })
   });
