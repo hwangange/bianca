@@ -227,6 +227,10 @@ h1, #bio-name, .navbar-brand {
   background: none;
 }
 
+#socialNav li {
+  margin: 0 .5em 0 .5em;
+}
+
 .icon-facebook:before {
     content: "\e902";
 }
@@ -472,6 +476,8 @@ section.glyphicon {
   opacity: 0;
   background-color: rgba(8, 0, 52, 0.64); /*#121826*/ /*rgba(58, 1, 132, 0.44); */
   transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center
 }
 
 .preview h2, .mask h2 {
@@ -480,6 +486,7 @@ section.glyphicon {
     font-family: Raleway, serif;
     transition: all 0.2s ease-in-out;
     font-size: 200%;
+    margin: 0;
 }
 .preview p, .mask p {
     transform: translateY(40%);

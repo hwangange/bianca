@@ -1,11 +1,15 @@
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-      /*  $("#carrot").css("display","inline-block"); */
+        $(".navbar-fixed-top").addClass("top-nav-collapse", function() {
+          $("#carrot").animate({opacity:1}, 'slow');
+        });
+
     } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-      /*  $("#carrot").css("display","none"); */
+        $(".navbar-fixed-top").removeClass("top-nav-collapse", function() {
+          $("#carrot").animate({opacity:0}, 'slow');
+        });
+
     }
 });
 
