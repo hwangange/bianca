@@ -18,19 +18,19 @@ $(window).scroll(function() {
     };
 
     var gallery = function() {
-      $("#gallery").find('h1').delay(500).animate({opacity:1}, 'slow');
+    /*  $("#gallery").find('h1').delay(500).animate({opacity:1}, 'slow'); */
     }
 
     var gallerycontent = function() {
-      $('#twod').delay(1000).animate({opacity:1}, 'slow');
+    /*  $('#twod').delay(1000).animate({opacity:1}, 'slow');
       $('#threed').delay(1500).animate({opacity:1}, 'slow');
-      $('#work').delay(2000).animate({opacity:1}, 'slow');
+      $('#work').delay(2000).animate({opacity:1}, 'slow'); */
     };
 
     var recognition = function() {
-      $('#recognition').find('h1').delay(500).animate({opacity:1}, 'slow');
+    /*  $('#recognition').find('h1').delay(500).animate({opacity:1}, 'slow');
       $('#recognition').find('h2').delay(1000).animate({opacity:1}, 'slow');
-      $('#recognition').find('p').delay(1500).animate({opacity:1}, 'slow');
+      $('#recognition').find('p').delay(1500).animate({opacity:1}, 'slow'); */
     };
 
     var recognitioncontent = function() {

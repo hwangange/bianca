@@ -301,5 +301,14 @@ $(document).ready(function() {
     })
   });
 
+  $('#horse').click(function() {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        'src': 'img/menu/work/horse.jpg'
+      }]
+    })
+  });
+
 
 });

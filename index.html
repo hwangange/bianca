@@ -62,13 +62,14 @@
         $('.navbar').hide();
         $('#bio').hide();
         $(window).load(function() {
-          $('#loading').delay(2000).hide('slow', function() {
+          $('#loading').find('h1').delay(2000).slideUp(function() {
+            $('#loading').delay(1000).hide('slow', function() {
               $('#bio').fadeIn(function() {
-                $('.navbar').delay(500).show("slow");
+                $('.navbar').delay(500).show("show");
               });
+            });
           });
-
-        })
+        });
         adjustAbout();
 
 
@@ -301,16 +302,16 @@
           </section>
 
        </section> -->
-       <section id = "about" class = "container-fluid">
+       <section id = "about" class = "container-fluid wow fadeIn">
             <div class = "topSection">
               <i class = "fa fa-list fa-2x wow bounceIn" data-wow-offset = "300"></i>
               <h1>about</h1>
+              <div class = "blockquote wow fadeIn blockquote-reverse" style = "float: right">
+                <p>The world is but a canvas to our imagination.</p>
+                <p style = "font-family: infinityregular; color: #cccccc">-- Henry David Thoreau</p>
+              </div>
             </div>
             <div class = "divider wow slideInLeft"></div>
-            <blockquote class = "wow fadeIn">
-            	<p>The world is but a canvas to our imagination.</p>
-            	<footer style = "font-family: infinityregular; color: #cccccc">Henry David Thoreau</footer>
-            </blockquote>
             <div class = "row">
               <div class = "col-md-6 container-fluid">
                 <p class = "wow fadeIn" style = "margin-top: 7%">Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
@@ -344,7 +345,7 @@
            </div>
          </div>
        </section> -->
-       <section id = "gallery" class = "container-fluid">
+       <section id = "gallery" class = "container-fluid wow fadeIn">
          <div class = "topSection">
             <i class = "fa fa-paint-brush fa-2x wow bounceIn" data-wow-offset = "300"></i>
              <h1>portfolio and gallery</h1>
@@ -428,34 +429,34 @@
                  <h2 class = "vcenter">"Nine-tailed Fox"</h2>
                </div>
              </div>
-             <div class = "gallery-item" id = "lotus">
+             <div class = "gallery-item center" id = "lotus">
                <img src = "img/menu/preview/lotus1.jpg">
                <div class = "mask">
-                 <h2>"Blooming Lotus""</h2>
+                 <h2 class = "vcenter">"Blooming Lotus""</h2>
                </div>
              </div>
-             <div class = "gallery-item" id = "native">
+             <div class = "gallery-item center" id = "native">
                <img src = "img/menu/preview/native3.jpg">
                <div class = "mask">
-                 <h2>"The Offering"</h2>
+                 <h2 class = "vcenter">"The Offering"</h2>
                </div>
              </div>
-             <div class = "gallery-item" id = "plate">
+             <div class = "gallery-item center" id = "plate">
                <img src = "img/menu/preview/plate1.jpg">
                <div class = "mask">
-                 <h2>"Plate"</h2>
+                 <h2 class = "vcenter">"Plate"</h2>
                </div>
              </div>
-             <div class = "gallery-item" id = "snake">
+             <div class = "gallery-item center" id = "snake">
                <img src = "img/menu/preview/snake1.jpg">
                <div class = "mask">
-                 <h2>"Abstract Snake"</h2>
+                 <h2 class = "vcenter">"Abstract Snake"</h2>
                </div>
              </div>
-             <div class = "gallery-item" id = "turtle">
+             <div class = "gallery-item center" id = "turtle">
                <img src = "img/menu/preview/turtle1.jpg">
                <div class = "mask">
-                 <h2>"Turtle"</h2>
+                 <h2 class = "vcenter">"Turtle"</h2>
                </div>
              </div>
            </div>
@@ -463,52 +464,58 @@
 
            <div class = "display" id = "work-display">
            <h2 style = "clear: both">Work in Progress</h2>
-             <div class = "gallery-item" id = "tea">
+             <div class = "gallery-item center" id = "tea">
                <img src = "img/menu/preview/tea1.JPG">
                <div class = "mask">
-                 <h2>"Teapot"</h2>
+                 <h2 class = "vcenter">"Teapot"</h2>
                </div>
              </div>
-             <div class = "gallery-item" id = "pumpkin">
+             <div class = "gallery-item center" id = "pumpkin">
                <img src = "img/menu/preview/pumpkin1.JPG">
                <div class = "mask">
-                 <h2>"Pumpkin"</h2>
+                 <h2 class = "vcenter">"Pumpkin"</h2>
+               </div>
+             </div>
+             <div class = "gallery-item center" id = 'horse'>
+               <img src = "img/menu/preview/horse.JPG">
+               <div class = "mask">
+                 <h2 class = "vcenter">"Horse"</h2>
                </div>
              </div>
            </div>
 
          </section>
 
-       <section id = "recognition" class = "container-fluid">
+       <section id = "recognition" class = "container-fluid wow fadeIn">
          <div class = "topSection">
            <i class = "fa fa-trophy fa-2x wow bounceIn" data-wow-offset = "300"></i>
            <h1>recognition</h1>
          </div>
          <div class = "divider wow slideInLeft"></div>
-         <h2 class = "wow fadeIn">2015</h2>
-         <section class = "wow fadeIn">
-           <h4>CHS Ceramics Best in Show Award</h4>
-            <p>Overall artist portfolio</p>
-           <h4>CHS Ceramics Best Experimental Design Award</h4>
-            <p>"Fishing for Words" - Experimental mixed media</p>
-           <h4>Houston Livestock Show and Rodeo: Award of Excellence</h4>
-            <p>"The Offering" - Sgraffito pinch pot - Pedestal</p>
-         </section>
-         <br>
-         <h2 class = "wow fadeIn">2010</h2>
-         <section class = "wow fadeIn">
-           <h4>Dr. Mari Jon Filla Student Art Contest: White Ribbon</h4>
-            <p>Oil pastel</p>
-         </section>
-         <br>
-         <h2 class = "wow fadeIn">2009</h2>
-         <section class = "wow fadeIn">
-           <h4>Dr. Mari Jon Filla Student Art Contest: Merit Award</h4>
-            <p>Colored pencil</p>
-         </section>
+           <h2 class = "wow fadeIn">2015</h2>
+           <section class = "wow fadeIn">
+             <h4>CHS Ceramics Best in Show Award</h4>
+              <p>Overall artist portfolio</p>
+             <h4>CHS Ceramics Best Experimental Design Award</h4>
+              <p>"Fishing for Words" - Experimental mixed media</p>
+             <h4>Houston Livestock Show and Rodeo: Award of Excellence</h4>
+              <p>"The Offering" - Sgraffito pinch pot - Pedestal</p>
+           </section>
+           <br>
+           <h2 class = "wow fadeIn">2010</h2>
+           <section class = "wow fadeIn">
+             <h4>Dr. Mari Jon Filla Student Art Contest: White Ribbon</h4>
+              <p>Oil pastel</p>
+           </section>
+           <br>
+           <h2 class = "wow fadeIn">2009</h2>
+           <section class = "wow fadeIn">
+             <h4>Dr. Mari Jon Filla Student Art Contest: Merit Award</h4>
+              <p>Colored pencil</p>
+           </section>
        </section>
 
-       <section id = "contact" class = "container-fluid">
+       <section id = "contact" class = "container-fluid wow fadeIn">
          <div class = 'content'>
            <div class = "topSection">
              <i class = "fa fa-phone fa-2x wow bounceIn" data-wow-offset = "300"></i>

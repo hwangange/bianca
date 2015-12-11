@@ -55,7 +55,7 @@ h1 {
 #about h1, #gallery h1, #recognition h1, #contact h1 {
   text-align: left;
   margin-bottom: 10px;
-  opacity: 0;
+  opacity: 1;
   margin-left: 20px;
 }
 
@@ -241,10 +241,6 @@ h1, #bio-name, .navbar-brand {
   color: white;
 }
 
-#recognition p {
-
-}
-
 #about, #gallery, #recognition {
   border-bottom-style: solid;
   border-bottom-color: #B2CCE5;
@@ -256,13 +252,19 @@ h1, #bio-name, .navbar-brand {
 }
 
 #about h1 {
-  opacity: 0;
+  opacity: 1;
 }
 
 #about img {
   border-radius: 20px;
   -webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
+}
+
+.blockquote {
+  display: inline;
+  margin-bottom: 2em;
+  border: none;
 }
 
 section.glyphicon {
@@ -349,7 +351,7 @@ section.glyphicon {
   margin-bottom: 10px;
 }
 #twod, #threed, #work {
-  opacity: 0;
+  opacity: 1;
   background-size: cover;
 }
 
@@ -468,7 +470,7 @@ section.glyphicon {
 
 .preview .mask, .gallery-item .mask {
   opacity: 0;
-  background-color: rgba(20, 1, 132, 0.64); /*#121826*/ /*rgba(58, 1, 132, 0.44); */
+  background-color: rgba(8, 0, 52, 0.64); /*#121826*/ /*rgba(58, 1, 132, 0.44); */
   transition: all 0.4s ease-in-out;
 }
 
@@ -477,7 +479,7 @@ section.glyphicon {
     opacity: 0;
     font-family: Raleway, serif;
     transition: all 0.2s ease-in-out;
-    font-size: 300%;
+    font-size: 200%;
 }
 .preview p, .mask p {
     transform: translateY(40%);
@@ -649,6 +651,7 @@ section.glyphicon {
   -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
 }
+
 /*.gallery-item {
   opacity: 1;
   -webkit-transition: opacity 1s;
@@ -678,7 +681,7 @@ section.glyphicon {
 /***RECOGNITION***/
 
 #recognition h1, #recognition h2, #recognition p {
-  opacity: 0;
+  opacity: 1;
 }
 
 #recognition p {
@@ -702,7 +705,7 @@ section.glyphicon {
 }
 
 #contact a {
-  opacity: 0;
+  opacity: 1;
 }
 
 #contact h2 {
@@ -773,7 +776,7 @@ a:hover {
 
 }
 
-#about p {
+#about .row p {
   opacity: 1;
   line-height: 230%;
 }
