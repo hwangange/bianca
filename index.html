@@ -15,6 +15,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Merriweather' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
       <link href="css/main.css" rel="stylesheet" media="screen">
     </head>
 
@@ -72,29 +73,35 @@
         });
         adjustAbout();
 
-
         $('.gallery-item').height($('.gallery-item').width());
 
-    /*  $('#bio').show(1000);*/
 
-      /*$('body').scrollspy({target: ".navbar", offset: 50}); */
+        var time = 0;
+        var string = "s";
+        $('.display').each(function(index) {
+          time = 0;
+          string = "s";
+          $(this).find('.gallery-item').each(function(index) {
+            time = time + 0.25;
+            string = time + "s";
+            $(this).attr("data-wow-delay",string);
+            $(this).attr("data-wow-offset", "100");
+            $(this).addClass("wow");
+            $(this).addClass("fadeInUp");
+          });
+        });
 
-      /** navbar appear only under home page **/
-    /*  var startY = $('#home').position().top + $('#home').outerHeight() - 50;
-      $('.navbar').html($('#nav').html());
-      $(window).scroll(function() {
-        checkY();
-      });
 
-      function checkY() {
-        if( $(window).scrollTop() > startY ){
-          $('.navbar').show("slow");
-        }else {
-          $('.navbar').fadeOut("slow");
-        }
-      }
+          time = 0;
+          string = "s";
+          $('.social').each(function(index) {
+            time = time + 0.25;
+            string = time + "s";
+            $(this).attr("data-wow-delay",string);
+            $(this).addClass("wow");
+            $(this).addClass("fadeIn");
+          });
 
-      checkY(); */
 
 
         $('#carrot').click(function() {
@@ -103,18 +110,6 @@
                 scrollTop: 0
           }, 1000);
         });
-
-      /*  $('#socialNav li a').hover(
-          function() {
-            $(this).effect("size", {
-              to: { width: 30, height: 30 }
-            });
-          },
-          function(){
-            $(this).effect("size", {
-              to: { width: 25, height: 25 }
-          });
-        }); */
 
         $('.preview').find('a').hover(
           function() {
@@ -131,14 +126,6 @@
           function() {
             $(this).css('cursor','default');
         });
-
-      /*  $('.center, .preview').hover(
-          function() {
-            $(this).css('cursor','pointer');
-          },
-          function() {
-            $(this).css('cursor','default');
-        }); */
 
         $('a[href^="#"]').on('click', function(event) {
             var target = $($(this).attr('href'));
@@ -239,7 +226,7 @@
                 <li id = "contact-but"><a href="#contact" class = "page-scroll hvr-grow">contact</a></li>
               </ul>
               <ul class = "nav navbar-nav navbar-right" id = "socialNav">
-                <li><a id = "carrot" href = "#" style = "opacity:0"><span class="glyphicon glyphicon-chevron-up hvr-grow-small"></span></a></li>
+                <li><a id = "carrot" href = "#"><span class="fa fa-chevron-up hvr-grow-small"></span></a></li>
                 <li><a href = "mailto:bianca.chu@gmail.com"><i class = "hvr-grow-small fa fa-envelope"></i></a></li>
                 <li><a href = "https://www.facebook.com/bianca.chu.5"><i class = "hvr-grow-small fa fa-facebook"></i></a></li>
                 <li><a href = "http://instagram.com"><i class = "hvr-grow-small fa fa-instagram"></i></a></li>
@@ -269,7 +256,6 @@
            <div class = "bio-divider" style = "display: block; margin-top: 10px; margin-bottom: 15px;"></div>
            <p style = "font-size: 150%">clay | mixed media | sculpting | painting | drawing</p>
          </div>
-         <a id = "carrotdown" href = "#about"><span class="glyphicon glyphicon-chevron-down" style = "background-color: white"></span></a>
 
        </section>
 
@@ -382,17 +368,17 @@
 
            <div class = "display" id = "threed-display">
            	<h2 id = "first-header wow fadeIn" style = "clear: both">3D Art</h2>
-            <div class = "wow fadeInUp">
+
                <div class = "gallery-item center" id = "bowl">
                  <img src = "img/menu/preview/bowl-thumb.jpg">
                  <div class = "mask">
-                   <h2 class = "vcenter" style = 'align: center'>"Bowl"</h2>
+                   <h2 class = "vcenter" style = 'align: center'>"Swimming Koi"</h2>
                  </div>
                </div>
                <div class = "gallery-item center" id = "enchilada">
                  <img src = "img/menu/preview/enchilada1.jpg">
                  <div class = "mask">
-                   <h2 class = "vcenter">"Enchiladas"</h2>
+                   <h2 class = "vcenter">"Sabrosa"</h2>
                  </div>
                </div>
                <div class = "gallery-item center" id = "fox">
@@ -401,8 +387,8 @@
                    <h2 class = "vcenter">"Nine-tailed Fox"</h2>
                  </div>
                </div>
-             </div>
-             <div class = "wow fadeInUp">
+
+
                <div class = "gallery-item center" id = "lotus">
                  <img src = "img/menu/preview/lotus1.jpg">
                  <div class = "mask">
@@ -418,15 +404,15 @@
                <div class = "gallery-item center" id = "plate">
                  <img src = "img/menu/preview/plate1.jpg">
                  <div class = "mask">
-                   <h2 class = "vcenter">"Plate"</h2>
+                   <h2 class = "vcenter">"Roots"</h2>
                  </div>
                </div>
-             </div>
-             <div class = "wow fadeInUp">
+
+
                <div class = "gallery-item center" id = "snake">
                  <img src = "img/menu/preview/snake1.jpg">
                  <div class = "mask">
-                   <h2 class = "vcenter">"Abstract Snake"</h2>
+                   <h2 class = "vcenter">"Rattler"</h2>
                  </div>
                </div>
                <div class = "gallery-item center" id = "turtle">
@@ -436,9 +422,9 @@
                  </div>
                </div>
              </div>
-           </div>
 
-           <div class = "display" id = "twod-display">
+
+      <!--     <div class = "display" id = "twod-display">
              <h2 class = "wow fadeIn" style = "clear: both">2D Art</h2>
              <div class = "wow fadeInUp">
                <div class = "gallery-item center" id = "bird">
@@ -468,15 +454,15 @@
                  </div>
                </div>
              </div>
-           </div>
+           </div> -->
 
            <div class = "display" id = "work-display">
            <h2 class = "wow fadeIn" style = "clear: both">Work in Progress</h2>
-             <div class = "wow fadeInUp">
+
                <div class = "gallery-item center" id = "tea">
                  <img src = "img/menu/preview/tea1.JPG">
                  <div class = "mask">
-                   <h2 class = "vcenter">"Teapot"</h2>
+                   <h2 class = "vcenter">"Dynasty"</h2>
                  </div>
                </div>
                <div class = "gallery-item center" id = "pumpkin">
@@ -491,7 +477,7 @@
                    <h2 class = "vcenter">"Horse"</h2>
                  </div>
                </div>
-             </div>
+
            </div>
 
          </section>
@@ -511,13 +497,13 @@
              <h4>Houston Livestock Show and Rodeo: Award of Excellence</h4>
               <p>"The Offering" - Sgraffito pinch pot - Pedestal</p>
            </section>
-           <br>
+           <div class = "thin-divider wow slideInLeft"></div>
            <h2 class = "wow fadeIn">2010</h2>
            <section class = "wow fadeIn">
              <h4>Dr. Mari Jon Filla Student Art Contest: White Ribbon</h4>
               <p>Oil pastel</p>
            </section>
-           <br>
+           <div class = "thin-divider wow slideInLeft"></div>
            <h2 class = "wow fadeIn">2009</h2>
            <section class = "wow fadeIn">
              <h4>Dr. Mari Jon Filla Student Art Contest: Merit Award</h4>
@@ -550,8 +536,8 @@
               <h4>bianca.chu@gmail.com</h4>
             </div>
             <div class = "tele social">
-              <a href = "tel:123456789"><i class = "hovicon effect-5 sub-a fa fa-phone"></i></a>
-              <h4>123456789</h4>
+              <a href = "tel:8322120193"><i class = "hovicon effect-5 sub-a fa fa-phone"></i></a>
+              <h4>832-212-0193</h4>
             </div>
             <div class = "facebook social">
               <a href = "https://www.facebook.com/bianca.chu.5"><i class = "hovicon effect-5 sub-a fa fa-facebook"></i></a>

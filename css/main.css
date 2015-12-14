@@ -84,6 +84,14 @@ h1 {
   margin-bottom: 30px;
 }
 
+.thin-divider{
+  border: 0;
+  height: 1px;
+  background: #c8c3be;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .loader {
   position: fixed;
   left: 0px;
@@ -161,6 +169,9 @@ h1 {
   }
 }
 
+#carrot {
+  opacity: 0;
+}
 .hidden {
   opacity: 0;
 }
@@ -187,8 +198,8 @@ h1, #bio-name, .navbar-brand {
 }
 
 #recognition h2 {
-  font-family: 'Comfortaa', cursive;
-  font-weight: 700;
+  font-family: 'Poiret One', cursive;
+
 }
 
 #recognition h4, #recognition p, #about p {
@@ -359,6 +370,9 @@ section.glyphicon {
   background-size: cover;
 }
 
+#twod {
+  display: none;
+}
 #gallery h2 {
   font-family: infinityregular;
   padding-top: 5%;
@@ -831,6 +845,10 @@ a {
   nav a.selected, nav a:hover {
     text-decoration: none;
     color: #fff;
+  }
+
+  nav a:hover {
+    text-shadow: -1px 1px 5px #03c, 1px -1px 5px #03c;
   }
 
 
