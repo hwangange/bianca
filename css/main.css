@@ -86,10 +86,11 @@ h1 {
 
 .thin-divider{
   border: 0;
-  height: 1px;
-  background: #c8c3be;
+  height: .8px;
+  background: rgb(200, 195, 190);
   margin-top: 30px;
   margin-bottom: 30px;
+  opacity: .4;
 }
 
 .loader {
