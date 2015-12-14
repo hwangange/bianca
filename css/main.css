@@ -291,7 +291,7 @@ section.glyphicon {
 /**** HOME PAGE ***/
 
 #home {
-  background-image: url(../img/home3.JPG); /*height:100%; width: 100%;*/
+  background-image: url(../img/home5.JPG); /*height:100%; width: 100%;*/
   background-attachment:fixed;
   background-repeat: no-repeat;
   background-position: 0 0 0 50%;
@@ -837,6 +837,9 @@ a {
   color: #fff;
 }
 
+  nav a {
+    transition: all 0.4s ease-in-out;
+  }
   nav a, nav a:visited {
     text-decoration: none;
     color: #fff;
@@ -848,7 +851,7 @@ a {
     color: #fff;
   }
 
-  nav a:hover {
+  nav li a:hover {
     text-shadow: -1px 1px 5px #03c, 1px -1px 5px #03c;
   }
 
