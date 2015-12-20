@@ -276,11 +276,11 @@ $(document).ready(function() {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        'src': 'img/menu/work/tea1.jpg',
-        'thumb': 'img/menu/work/tea1.jpg'
+        'src': 'img/menu/work/tea1.JPG',
+        'thumb': 'img/menu/work/tea1.JPG'
       }, {
-        'src': 'img/menu/work/tea2.jpg',
-        'thumb': 'img/menu/work/tea2.jpg'
+        'src': 'img/menu/work/tea2.JPG',
+        'thumb': 'img/menu/work/tea2.JPG'
       }]
     })
   });
