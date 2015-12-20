@@ -78,18 +78,34 @@
 
         var time = 0;
         var string = "s";
+        var currentScroll = 0;
         $('.display').each(function(index) {
           time = 0;
           string = "s";
           $(this).find('.gallery-item').each(function(index) {
             time = time + 0.25;
+            
+            if($(this).scrollTop() != currentScroll) {
+              time = 0;
+              currentScroll = $(this).scrollTop();
+            }
+
             string = time + "s";
-            $(this).attr("data-wow-delay",string);
-            $(this).attr("data-wow-offset", "100");
+
+            $(this).attr("data-wow-delay",string); 
+            $(this).attr("data-wow-offset", "100"); 
             $(this).addClass("wow");
             $(this).addClass("fadeInUp");
           });
         });
+
+        $('.page').each(function(index) {
+          $(this).find('.fa').eq(0).attr("data-wow-offset", "225");
+          $(this).find('h1').eq(0).attr("data-wow-offset", "300");
+          $(this).find('.divider').eq(0).attr("data-wow-offset", "325");
+        });
+
+
 
 
           time = 0;
@@ -215,9 +231,9 @@
                 <span class="icon-bar" style = "background-color:white"></span>
                 <span class="icon-bar" style = "background-color:white"></span>
               </button>
-              <a class="navbar-brand" href="#home">bianca chu</a>
+              <a class="navbar-brand" href="#home"><h1>bianca chu</h1></a>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbarCollapse" aria-expanded="false" style="height: 1px;">
+            <div id = "nav" class="collapse navbar-collapse navbar-ex1-collapse" id="navbarCollapse" aria-expanded="false" >
               <ul class="nav navbar-nav" id = "mainNav">
                 <li class = "hidden"><a href = "#page-top" class = "page-scroll hvr-grow"></a></li>
                 <li id = "about-but"><a href="#about" class = "page-scroll hvr-grow">about</a></li>
@@ -225,11 +241,13 @@
                 <li id = "recognition-but"><a href="#recognition" class = "page-scroll hvr-grow">recognition</a></li>
                 <li id = "contact-but"><a href="#contact" class = "page-scroll hvr-grow">contact</a></li>
               </ul>
-              <ul class = "nav navbar-nav navbar-right" id = "socialNav">
-                <li><a id = "carrot" href = "#"><span class="fa fa-chevron-up hvr-grow-small"></span></a></li>
+              <ul class = 'nav navbar-nav navbar-right' id = "socialNav">
                 <li><a href = "mailto:bianca.chu@gmail.com"><i class = "hvr-grow-small fa fa-envelope"></i></a></li>
                 <li><a href = "https://www.facebook.com/bianca.chu.5"><i class = "hvr-grow-small fa fa-facebook"></i></a></li>
                 <li><a href = "https://www.instagram.com/biancachu/"><i class = "hvr-grow-small fa fa-instagram"></i></a></li>
+              </ul>
+              <ul class = "nav navbar-nav navbar-right">
+                <li><a id = "carrot" href = "#"><span class="fa fa-chevron-up hvr-grow-small"></span></a></li>
               </ul>
             <!--  <section align = "right" style = "margin: 15px">
                 <span class="glyphicon glyphicon-chevron-down" style = 'margin-right: 5px'></span>
@@ -288,11 +306,11 @@
           </section>
 
        </section> -->
-       <section id = "about" class = "container-fluid wow fadeIn">
+       <section id = "about" class = "container-fluid wow fadeIn page">
             <div class = "topSection">
-              <i class = "fa fa-list fa-2x wow bounceIn" data-wow-offset = "300"></i>
-              <h1>about</h1>
-              <div class = "blockquote wow fadeIn blockquote-reverse" style = "float: right">
+              <i class = "fa fa-list fa-2x wow bounceIn"></i>
+              <h1 class = "wow slideInLeft">about</h1>
+              <div class = "blockquote wow fadeIn blockquote-reverse" style = "float: right" data-wow-offset = "350">
                 <p>The world is but a canvas to our imagination.</p>
                 <p style = "font-family: infinityregular; color: #cccccc">-- Henry David Thoreau</p>
               </div>
@@ -304,12 +322,12 @@
                   <p style = "margin-top: 7%">Bianca Chu knew of her passion for art the moment she first picked up a pencil. Since then, Chu has dedicated herself to developing her art skills and has found the process to be both an enjoyable pastime and a vital learning experience. As Chu says, "Even as a young child, I viewed art as an effective method of expressing my feelings in ways that words cannot."</p>
                   <p style = "margin-bottom: 5%">Chu's journey as an artist began at age 8, when she took classes under the mentorship of visual arts instructor John Rodak. Through Mr. Rodak's teachings, Chu was able to explore two-dimensional art in different mediums, ranging from oil painting to pastels.</p>
               </section>
-                <div class = "container-fluid" style = "align-items: center"><img id = "profile" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" data-wow-offset = "300" data-wow-delay = "1s"></div>
+                <div class = "container-fluid" style = "align-items: center"><img id = "profile" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" data-wow-offset = "300" data-wow-offset = "600"></div>
                </div>
               <div class = "col-md-6 equal">
                 <img id = "profile2" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" data-wow-offset = "300" style = "display: inline" width = "90%" >
-                <img id = "profile3" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "50%" data-wow-delay = "1s">
-                <img id = "profile4" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "31%" data-wow-delay = "1.5s">
+                <img id = "profile3" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "50%" data-wow-offset = "325">
+                <img id = "profile4" class = "img-responsive wow bounceIn profile" src = "img/profile.jpg" style = "display: inline" width = "31%" data-wow-offset = "400">
                 <section class = "wow fadeIn">
                   <p id = "trouble-p" >Chu enjoyed Mr. Rodak's classes so much that she immediately enrolled in her middle school's art class once given the opportunity. There, Chu continued to develop her creativity as well as discover a new interest: sculpting.</p>
                   <p>Now a high school student, Chu still pursues her passion for sculpting and other forms of three dimensional art, including clay and mixed media. "Art isn't just a hobby," Chu says. "It's a craft that has shaped me into the person I am today." </p>
@@ -335,10 +353,10 @@
            </div>
          </div>
        </section> -->
-       <section id = "gallery" class = "container-fluid wow fadeIn">
+       <section id = "gallery" class = "container-fluid wow fadeIn page">
          <div class = "topSection">
-            <i class = "fa fa-paint-brush fa-2x wow bounceIn" data-wow-offset = "300"></i>
-             <h1>portfolio and gallery</h1>
+            <i class = "fa fa-paint-brush fa-2x wow bounceIn"></i>
+             <h1 class = "wow slideInLeft">portfolio and gallery</h1>
         </div>
         <div class = "divider wow slideInLeft"></div>
         <!--   <div class = "equal sameHeights">
@@ -371,7 +389,7 @@
            </div> -->
 
            <div class = "display" id = "threed-display">
-           	<h2 id = "first-header wow fadeIn" style = "clear: both">3D Art</h2>
+           	<h2 id = "first-header wow fadeIn" style = "clear: both" data-wow-offset = "400">3D Art</h2>
 
                <div class = "gallery-item center" id = "bowl">
                  <img src = "img/menu/preview/bowl-thumb.jpg">
@@ -486,9 +504,9 @@
 
          </section>
 
-       <section id = "recognition" class = "container-fluid wow fadeIn">
+       <section id = "recognition" class = "container-fluid wow fadeIn page">
          <div class = "topSection">
-           <i class = "fa fa-trophy fa-2x wow bounceIn" data-wow-offset = "300"></i>
+           <i class = "fa fa-trophy fa-2x wow bounceIn"></i>
            <h1>recognition</h1>
          </div>
          <div class = "divider wow slideInLeft"></div>
@@ -529,10 +547,10 @@
            </section>
        </section>
 
-       <section id = "contact" class = "container-fluid wow fadeIn">
+       <section id = "contact" class = "container-fluid wow fadeIn page">
          <div class = 'content'>
            <div class = "topSection">
-             <i class = "fa fa-phone fa-2x wow bounceIn" data-wow-offset = "300"></i>
+             <i class = "fa fa-mobile fa-3x wow bounceIn"></i>
              <h1>contact</h1>
            </div>
            <div class = "divider wow slideInLeft"></div>
@@ -550,12 +568,12 @@
             </div> -->
 
             <div class = "email social">
-              <a href = "mailto:bianca.chu@gmail.com"><i class = "hovicon effect-5 sub-a fa fa-envelope"></i></a>
-              <h4>bianca.chu@gmail.com</h4>
+              <a href = "mailto:chu.bianca@gmail.com"><i class = "hovicon effect-5 sub-a fa fa-envelope"></i></a>
+              <h4>chu.bianca@gmail.com</h4>
             </div>
             <div class = "tele social">
-              <a href = "tel:8322120193"><i class = "hovicon effect-5 sub-a fa fa-phone"></i></a>
-              <h4>832-212-0193</h4>
+              <a href = "tel:2813135896"><i class = "hovicon effect-5 sub-a fa fa-phone"></i></a>
+              <h4>281-313-5896</h4>
             </div>
             <div class = "facebook social">
               <a href = "https://www.facebook.com/bianca.chu.5"><i class = "hovicon effect-5 sub-a fa fa-facebook"></i></a>

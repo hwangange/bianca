@@ -18,7 +18,9 @@ html {
     .navbar {
     /*    padding: 5px 0;
         background: transparent; */
-        padding: 0 30px;
+        padding: 5px 0 5px 10px;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
         background: rgba(0, 0, 0, .3);
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
