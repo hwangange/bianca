@@ -170,9 +170,7 @@ h1 {
   }
 }
 
-#carrot {
-  opacity: 0;
-}
+
 .hidden {
   opacity: 0;
 }
@@ -241,7 +239,7 @@ h1, #bio-name, .navbar-brand {
   background: none;
 }
 
-#socialNav li.active a, #socialNav li.active a:hover, #socialNav li a:hover, #socialNav li a:focus {
+.navbar-right li.active a, .navbar-right li.active a:hover, .navbar-right li a:hover, .navbar-right li a:focus {
   background: none;
 }
 
@@ -252,7 +250,11 @@ h1, #bio-name, .navbar-brand {
   border-left-width: 1px;
 }
 
-#socialNav li:nth-last-child(1) {
+#carrot {
+  opacity: 0;
+}
+
+.navbar-right li:nth-last-child(1) {
   margin-right: 0px;
 }
 
@@ -345,7 +347,7 @@ section.glyphicon {
   padding-top: 2%;
   text-align: center;
   right: 0;
-  top: 25vh;
+  bottom: 20vh;
   margin-right: 5%;
   border-radius: 25px;
   z-index: 2;
@@ -924,7 +926,7 @@ a {
       border-radius: 0px;
     }
 
-    #socialNav {
+    .navbar-right {
       display: none;
     }
 
@@ -1009,7 +1011,7 @@ a {
       height: auto;
     }
 
-    #socialNav li {
+    .navbar-right li {
       display: none;
     }
 

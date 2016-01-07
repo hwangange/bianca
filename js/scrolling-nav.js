@@ -8,11 +8,15 @@ $(window).scroll(function() {
 
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
-        $('#carrot').addClass('visible');
-
+        if($('#carrot').attr("opacity") == 0) {
+            $('#carrot').delay(100).animate({opacity:1}, "fast");
+        } else {
+            $('#carrot').css("opacity", "1");
+        }
+        
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        $('#carrot').removeClass('visible');
+        $('#carrot').delay(100).animate({opacity:0}, "fast");
     }
 
 
