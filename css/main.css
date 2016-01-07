@@ -237,10 +237,12 @@ h1, #bio-name, .navbar-brand {
 
 #mainNav li.active a, #mainNav li.active a:hover, #mainNav li a:hover, #mainNav li a:focus {
   background: none;
+  color: white;
 }
 
 .navbar-right li.active a, .navbar-right li.active a:hover, .navbar-right li a:hover, .navbar-right li a:focus {
   background: none;
+  color: white;
 }
 
 #socialNav li {
