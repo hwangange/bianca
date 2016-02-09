@@ -93,6 +93,13 @@ h1 {
   opacity: .4;
 }
 
+hr {
+  color: rgb(200, 195, 190);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  opacity: .4;
+}
+
 .loader {
   position: fixed;
   left: 0px;
