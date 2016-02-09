@@ -63,13 +63,13 @@
         $('.navbar').hide();
         $('#bio').hide();
         $(window).load(function() {
-          $('#loading').find('h1').delay(2000).slideUp(function() {
-            $('#loading').delay(1000).hide('slow', function() {
+         // $('#loading').find('h1').delay(2000).fadeOut(function() {
+            $('#loading').delay(3000).hide('slow', function() {
               $('#bio').fadeIn(function() {
                 $('.navbar').delay(500).show("show");
               });
             });
-          });
+       //   });
         });
         adjustAbout();
 
